@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { MessageCircle, ArrowDown } from "lucide-react"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -25,6 +26,7 @@ export function HeroSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <Link href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." target="_blank">
           <Button
             size="lg"
             className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold text-lg px-8 py-6 w-full sm:w-auto"
@@ -32,6 +34,8 @@ export function HeroSection() {
             <MessageCircle className="mr-2" size={20} />
             WhatsApp
           </Button>
+          </Link>
+          <Link href="#galeria" prefetch={false}>
           <Button
             size="lg"
             variant="outline"
@@ -39,6 +43,7 @@ export function HeroSection() {
           >
             Ver Trabajos
           </Button>
+          </Link>
         </div>
 
         {/* Scroll Indicator */}
