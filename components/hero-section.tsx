@@ -31,7 +31,7 @@ export function HeroSection() {
           <Link href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." target="_blank">
           <Button
             size="lg"
-            className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold text-lg px-8 py-6 w-full sm:w-auto"
+            className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold text-lg px-8 py-6 w-full sm:w-auto cursor-pointer"
           >
             <MessageCircle className="mr-2" size={20} />
             WhatsApp
@@ -41,7 +41,7 @@ export function HeroSection() {
           <Button
             size="lg"
             variant="outline"
-            className="border-2 border-neutral-600 text-white hover:bg-neutral-800 font-bold text-lg px-8 py-6 w-full sm:w-auto bg-transparent"
+            className="border-2 border-neutral-600 text-white hover:bg-neutral-800 font-bold text-lg px-8 py-6 w-full sm:w-auto bg-transparent cursor-pointer"
           >
             Ver Trabajos
           </Button>
