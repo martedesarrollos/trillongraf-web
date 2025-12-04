@@ -21,7 +21,7 @@ export function Navbar() {
     { href: "#inicio", label: "Inicio" },
     { href: "#servicios", label: "Servicios" },
     { href: "#galeria", label: "Galería" },
-    { href: "#contacto", label: "Contacto" },
+    { href: "#contacto", label: "¿Quiénes somos?" },
   ]
 
   return (
@@ -58,7 +58,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2 cursor-pointer"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

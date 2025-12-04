@@ -20,10 +20,10 @@ export function HeroSection() {
       {/* Content */}
       <div className="container mx-auto relative z-20 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight text-balance">
-          Cartelería y Publicidad en el <span className="text-yellow-400">Cordón Industrial</span>
+          Hacemos que tu negocio <span className="text-yellow-400">destaque.</span>
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto text-balance">
-          Diseño, fabricación y montaje en Granadero Baigorria, Rosario y San Lorenzo.
+          Llevamos tu imagen al mundo real. Diseño, fabricación y montaje de cartelería publicitaria de alto impacto.
         </p>
 
         {/* CTA Buttons */}
