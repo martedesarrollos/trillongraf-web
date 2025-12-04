@@ -81,7 +81,7 @@ export function Navbar() {
               </a>
             ))}
             <Link href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." target="_blank">
-            <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold">Pedir Presupuesto</Button>
+            <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold cursor-pointer">Pedir Presupuesto</Button>
             </Link>
           </div>
         </div>
