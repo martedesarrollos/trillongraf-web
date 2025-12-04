@@ -18,7 +18,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto relative z-10 text-center">
+      <div className="container mx-auto relative z-20 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight text-balance">
           Cartelería y Publicidad en el <span className="text-yellow-400">Cordón Industrial</span>
         </h1>
