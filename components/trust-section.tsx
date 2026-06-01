@@ -30,7 +30,7 @@ const stats = [
 function Counter({ value }: { value: string }) {
   const [count, setCount] = useState(0)
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-50px" })
+  const isInView = useInView(ref, { once: true, margin: "-20px" })
   const shouldReduceMotion = useReducedMotion()
 
   const num = parseInt(value.replace(/\D/g, ""), 10)
@@ -79,7 +79,7 @@ export function TrustSection() {
           <motion.div
             initial={{ opacity: 0, x: shouldReduceMotion ? 0 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-30px" }}
             transition={{ type: "spring", stiffness: 60, damping: 14 }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 text-balance tracking-tight">
@@ -116,7 +116,7 @@ export function TrustSection() {
           <motion.div 
             initial={{ opacity: 0, x: shouldReduceMotion ? 0 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-30px" }}
             transition={{ type: "spring", stiffness: 60, damping: 14 }}
             className="relative"
           >

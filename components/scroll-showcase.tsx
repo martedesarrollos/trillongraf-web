@@ -106,7 +106,7 @@ export function ScrollShowcase() {
           <motion.div
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-30px" }}
             transition={{ duration: 0.5 }}
           >
             <span className="text-yellow-400 font-bold tracking-widest uppercase text-xs sm:text-sm px-3 py-1 bg-yellow-400/10 rounded-full border border-yellow-400/20">
