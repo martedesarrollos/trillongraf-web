@@ -81,7 +81,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#contacto" className="hover:text-yellow-400 transition-colors">
-                  Nosotros
+                  Contacto
                 </a>
               </li>
             </ul>
