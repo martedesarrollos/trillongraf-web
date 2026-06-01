@@ -1,9 +1,11 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -33,9 +35,17 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-2">
-            <div className="bg-yellow-400 text-black font-bold text-xl md:text-2xl px-3 py-1 rounded">TG</div>
-            <span className="text-white font-bold text-lg md:text-xl hidden sm:inline">TrillonGraf</span>
+          <a href="#inicio" className="flex items-center gap-2.5 group">
+            <Image
+              src="/logo-icon.png"
+              alt="TrillonGraf Logo"
+              width={40}
+              height={40}
+              className="w-8 h-8 md:w-10 md:h-10 object-contain transition-transform duration-300 group-hover:scale-110"
+            />
+            <span className="text-white font-bold text-lg md:text-xl tracking-wide hidden sm:inline transition-colors duration-300 group-hover:text-yellow-400">
+              TrillonGraf
+            </span>
           </a>
 
           {/* Desktop Navigation */}
@@ -50,7 +60,10 @@ export function Navbar() {
               </a>
             ))}
             <Link href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." target="_blank">
-            <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold cursor-pointer">Pedir Presupuesto</Button>
+            <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold cursor-pointer flex items-center gap-2">
+              <WhatsAppIcon size={18} />
+              Pedir Presupuesto
+            </Button>
             </Link>
 
           </div>
@@ -81,7 +94,10 @@ export function Navbar() {
               </a>
             ))}
             <Link href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." target="_blank">
-            <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold cursor-pointer">Pedir Presupuesto</Button>
+            <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold cursor-pointer flex items-center gap-2 w-full justify-center">
+              <WhatsAppIcon size={18} />
+              Pedir Presupuesto
+            </Button>
             </Link>
           </div>
         </div>
