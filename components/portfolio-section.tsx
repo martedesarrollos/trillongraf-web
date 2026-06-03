@@ -33,7 +33,7 @@ const portfolioItems = [
     id: 4,
     category: "Vidriera",
     title: "Ploteo premium de vidriera",
-    src: "imstore.jpeg",
+    src: "/imstore.jpeg",
     height: "tall"
   },
   {

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Box, Lightbulb, Car, Shield, ChevronRight, ChevronLeft, Hammer, Palette, Zap } from "lucide-react"
@@ -13,7 +13,7 @@ const services = [
     icon: Box,
     images: [
       "/corporeo-xeroff.jpg",
-            "costa_nueva.JPEG"
+      "/costa_nueva.JPEG"
     ],
     accent: "text-yellow-400 border-yellow-500/20 bg-yellow-500/5",
     details: [
@@ -30,7 +30,7 @@ const services = [
     icon: Lightbulb,
     images: [
       "/dulcereino.JPEG",
-      "vibra.JPEG",
+      "/vibra.JPEG",
       "/nanzer_backlight.JPEG"
     ],
     accent: "text-fuchsia-400 border-fuchsia-500/20 bg-fuchsia-500/5",
@@ -48,11 +48,9 @@ const services = [
     description: "Rotulación total o parcial de vehículos de trabajo, utilitarios, camionetas, camiones y flotas de distribución comercial completa. Diseñamos piezas publicitarias adaptadas al chasis de cada marca de auto, utilizando vinilos vehiculares premium resistentes a la intemperie, rayos UV, lavados de alta presión y desgaste vial.",
     icon: Car,
     images: [
-      "ambulancia.JPEG",
+      "/ambulancia.JPEG",
       "/soria2.JPEG",
       "/soria.JPEG"
-      
-      
     ],
     accent: "text-blue-400 border-blue-500/20 bg-blue-500/5",
     details: [
@@ -70,8 +68,8 @@ const services = [
     icon: Zap,
     images: [
       "/neon-led.jpg",
-      "ruby.jpeg",
-      "inthehouse.JPEG"
+      "/ruby.jpeg",
+      "/inthehouse.JPEG"
     ],
     accent: "text-cyan-400 border-cyan-500/20 bg-cyan-500/5",
     details: [
@@ -100,8 +98,59 @@ function ServiceCarousel({ images, title }: ServiceCarouselProps) {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
   }
 
+  // Preload all images in the carousel on mount
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image()
+      img.src = src
+    })
+  }, [images])
+
+  // Mobile Swipe Gesture Recognition
+  const [touchStartX, setTouchStartX] = useState<number | null>(null)
+  const [touchStartY, setTouchStartY] = useState<number | null>(null)
+  const [touchEndX, setTouchEndX] = useState<number | null>(null)
+  const [touchEndY, setTouchEndY] = useState<number | null>(null)
+
+  const minSwipeDistance = 50
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEndX(null)
+    setTouchEndY(null)
+    setTouchStartX(e.targetTouches[0].clientX)
+    setTouchStartY(e.targetTouches[0].clientY)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.targetTouches[0].clientX)
+    setTouchEndY(e.targetTouches[0].clientY)
+  }
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX || !touchStartY || !touchEndY) return
+    const distanceX = touchStartX - touchEndX
+    const distanceY = touchStartY - touchEndY
+    const isHorizontalSwipe = Math.abs(distanceX) > Math.abs(distanceY)
+
+    if (isHorizontalSwipe) {
+      const isLeftSwipe = distanceX > minSwipeDistance
+      const isRightSwipe = distanceX < -minSwipeDistance
+
+      if (isLeftSwipe) {
+        nextSlide()
+      } else if (isRightSwipe) {
+        prevSlide()
+      }
+    }
+  }
+
   return (
-    <div className="relative w-full aspect-video md:aspect-[16/10] rounded-2xl overflow-hidden border border-neutral-800/60 bg-neutral-950 group">
+    <div
+      className="relative w-full aspect-video md:aspect-[16/10] rounded-2xl overflow-hidden border border-neutral-800/60 bg-neutral-950 group"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Images Slider */}
       <div className="w-full h-full relative">
         <AnimatePresence mode="wait">
@@ -114,6 +163,7 @@ function ServiceCarousel({ images, title }: ServiceCarouselProps) {
             exit={{ opacity: 0, x: shouldReduceMotion ? 0 : -30 }}
             transition={{ duration: 0.3 }}
             className="w-full h-full object-cover"
+            draggable={false}
           />
         </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent pointer-events-none" />
