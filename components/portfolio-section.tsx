@@ -11,63 +11,63 @@ const portfolioItems = [
   {
     id: 1,
     category: "Corpóreos",
-    title: "Corpóreos con iluminación backlight (Gimnasio Heroff)",
+    title: "Corpóreos con iluminación backlight para gimnasio Heroff (Rosario)",
     src: "/corporeo-xeroff.jpg",
     height: "tall"
   },
   {
     id: 2,
     category: "Cartelería",
-    title: "Lona front con estructura en caño estructural (Campeones 2022)",
+    title: "Lona front con estructura en caño estructural (Cordón Industrial)",
     src: "/lona-messi.jpg",
     height: "medium"
   },
   {
     id: 3,
     category: "Corpóreos",
-    title: "Letras corpóreas de fachada - Estación de Servicio Shell",
+    title: "Letras corpóreas de fachada - Estación de Servicio Shell (Granadero Baigorria)",
     src: "/estacion-shell-canopy.jpg",
     height: "medium"
   },
   {
     id: 4,
     category: "Vidriera",
-    title: "Ploteo premium de vidriera",
+    title: "Ploteo y rotulación premium de vidriera comercial (Rosario)",
     src: "/imstore.jpeg",
     height: "tall"
   },
   {
     id: 5,
     category: "Cartelería",
-    title: "Tótem estructural e Indicador GNC - Estación Shell",
+    title: "Tótem estructural e Indicador LED GNC - Estación Shell (Granadero Baigorria)",
     src: "/estacion-shell-totem.jpg",
     height: "medium"
   },
   {
     id: 6,
     category: "Vehículos",
-    title: "Trailer comercial con estructura metálica y lona backlight",
+    title: "Trailer comercial con estructura metálica y lona backlight (San Lorenzo)",
     src: "/soria3.JPEG",
     height: "tall"
   },
   {
     id: 7,
     category: "Cartelería",
-    title: "Estructura personalizada con lona impresa en alta calidad y retroiluminada",
+    title: "Estructura publicitaria con lona retroiluminada de alta visibilidad (Capitán Bermúdez)",
     src: "/vibra.JPEG",
     height: "medium"
   },
   {
     id: 8,
     category: "Corpóreos",
-    title: "Cartel corpóreo personalizado con iluminación mixta frontal y trasera (Las Vegas)",
+    title: "Cartel corpóreo personalizado con iluminación mixta - Las Vegas (La Florida, Rosario)",
     src: "/las_vegas.JPEG",
     height: "medium"
   },
   {
     id: 9,
     category: "Corpóreos",
-    title: "Letras corpóreas en Polyfan con acabado premium (Alyna)",
+    title: "Letras corpóreas en Polyfan con acabado premium para local comercial (Gran Rosario)",
     src: "/alyna.JPEG",
     height: "medium"
   }

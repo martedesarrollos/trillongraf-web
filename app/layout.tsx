@@ -11,19 +11,18 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://trillongraf.com.ar"),
-  title: "TrillonGraf - Cartelería y Publicidad | Granadero Baigorria, Rosario",
+  title: "Fábrica de Carteles y Letreros | Gran Rosario y Cordón Industrial",
   description:
-    "Diseño, fabricación y montaje de carteles, letras corpóreas, rotulación vehicular y señalética industrial en Granadero Baigorria, Rosario y San Lorenzo.",
-  generator: "v0.app",
+    "Fábrica de cartelería y publicidad en Gran Rosario, Granadero Baigorria y San Lorenzo. Diseño y montaje de carteles luminosos LED, letras corpóreas 3D y marquesinas.",
   keywords:
-    "cartelería, publicidad, letras corpóreas, rotulación vehicular, Granadero Baigorria, Rosario, San Lorenzo, carteles industriales",
+    "fábrica de carteles, carteles luminosos, letras corpóreas, marquesinas, rotulación vehicular, Granadero Baigorria, Rosario, San Lorenzo, Cordón Industrial, Gran Rosario",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "TrillonGraf - Cartelería y Publicidad | Granadero Baigorria, Rosario",
+    title: "Fábrica de Carteles y Letreros | Gran Rosario y Cordón Industrial",
     description:
-      "Diseño, fabricación y montaje de carteles, letras corpóreas, rotulación vehicular y señalética industrial en Granadero Baigorria, Rosario y San Lorenzo.",
+      "Fábrica de cartelería y publicidad en Gran Rosario, Granadero Baigorria y San Lorenzo. Diseño y montaje de carteles luminosos LED, letras corpóreas 3D y marquesinas.",
     url: "https://trillongraf.com.ar",
     siteName: "TrillonGraf",
     locale: "es_AR",
@@ -52,6 +51,54 @@ export const metadata: Metadata = {
   },
 }
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TrillonGraf - Cartelería y Publicidad",
+  "image": "https://trillongraf.com.ar/icon.png",
+  "url": "https://trillongraf.com.ar",
+  "telephone": "+5493413258979",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "M. Cornelio Saavedra 3393",
+    "addressLocality": "Granadero Baigorria",
+    "addressRegion": "Santa Fe",
+    "postalCode": "2152",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -32.8554,
+    "longitude": -60.7108
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Granadero Baigorria" },
+    { "@type": "City", "name": "Rosario" },
+    { "@type": "City", "name": "San Lorenzo" },
+    { "@type": "City", "name": "Capitán Bermúdez" },
+    { "@type": "City", "name": "Funes" },
+    { "@type": "AdministrativeArea", "name": "Gran Rosario" },
+    { "@type": "AdministrativeArea", "name": "Cordón Industrial" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/trillongraf",
+    "https://instagram.com/trillongrafpublicidad"
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "18:00"
+  }
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,6 +106,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
+      </head>
       <body className={`font-sans antialiased`}>
         <Script
           id="meta-pixel"

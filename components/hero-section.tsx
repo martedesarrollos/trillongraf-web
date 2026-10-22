@@ -84,6 +84,13 @@ export function HeroSection() {
         animate="visible"
         className="container mx-auto relative z-20 text-center"
       >
+        <motion.div 
+          variants={itemVariants}
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellow-400/10 border border-yellow-400/20 text-yellow-400 text-xs sm:text-sm font-bold tracking-wide uppercase mb-6"
+        >
+          <span>Fábrica de Cartelería & Publicidad • Gran Rosario y Cordón Industrial</span>
+        </motion.div>
+
         <motion.h1 
           variants={itemVariants}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight text-balance tracking-tight"
@@ -95,8 +102,7 @@ export function HeroSection() {
           variants={itemVariants}
           className="text-lg sm:text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto text-balance font-medium"
         >
-          Llevamos tu imagen al mundo real. 
-          Diseño, fabricación y montaje de cartelería publicitaria de alto impacto.
+          Diseño, fabricación y montaje de carteles luminosos LED, letras corpóreas, marquesinas y rotulación en Rosario, Granadero Baigorria, San Lorenzo y todo el cordón industrial.
         </motion.p>
 
         {/* CTA Buttons */}

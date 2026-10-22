@@ -44,7 +44,9 @@ export function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/trillongraf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-neutral-800 hover:bg-yellow-400 hover:text-black p-2 rounded transition-colors"
                 aria-label="Facebook"
               >
