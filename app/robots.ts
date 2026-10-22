@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.trillongraf.com.ar/sitemap.xml",
+    sitemap: "https://trillongraf.com.ar/sitemap.xml",
   }
 }

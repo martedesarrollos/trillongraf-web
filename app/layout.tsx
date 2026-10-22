@@ -10,12 +10,25 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://trillongraf.com.ar"),
   title: "TrillonGraf - Cartelería y Publicidad | Granadero Baigorria, Rosario",
   description:
     "Diseño, fabricación y montaje de carteles, letras corpóreas, rotulación vehicular y señalética industrial en Granadero Baigorria, Rosario y San Lorenzo.",
   generator: "v0.app",
   keywords:
     "cartelería, publicidad, letras corpóreas, rotulación vehicular, Granadero Baigorria, Rosario, San Lorenzo, carteles industriales",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "TrillonGraf - Cartelería y Publicidad | Granadero Baigorria, Rosario",
+    description:
+      "Diseño, fabricación y montaje de carteles, letras corpóreas, rotulación vehicular y señalética industrial en Granadero Baigorria, Rosario y San Lorenzo.",
+    url: "https://trillongraf.com.ar",
+    siteName: "TrillonGraf",
+    locale: "es_AR",
+    type: "website",
+  },
   icons: {
     icon: [
       {

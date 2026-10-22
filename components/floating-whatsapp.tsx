@@ -4,8 +4,10 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { X } from "lucide-react"
+import { usePathname } from "next/navigation"
 
 export function FloatingWhatsApp() {
+  const pathname = usePathname()
   const [showTooltip, setShowTooltip] = useState(false)
   const shouldReduceMotion = useReducedMotion()
 
@@ -26,8 +28,12 @@ export function FloatingWhatsApp() {
     }
   }, [])
 
+  if (pathname === "/presupuesto") {
+    return null
+  }
+
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center justify-end pointer-events-none">
+    <div className="fixed bottom-6 right-6 z-50 flex items-center justify-end pointer-events-none print:hidden">
       <AnimatePresence>
         {showTooltip && (
           <motion.div
