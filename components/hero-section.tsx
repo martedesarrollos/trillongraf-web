@@ -102,7 +102,7 @@ export function HeroSection() {
           variants={itemVariants}
           className="text-lg sm:text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto text-balance font-medium"
         >
-          Diseño, fabricación y montaje de carteles luminosos LED, letras corpóreas, marquesinas y rotulación en Rosario, Granadero Baigorria, San Lorenzo y todo el cordón industrial.
+          Llevamos tu imagen al mundo real. Diseño, fabricación y montaje de cartelería publicitaria de alto impacto.
         </motion.p>
 
         {/* CTA Buttons */}
