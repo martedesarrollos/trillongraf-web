@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { trackWhatsAppClick } from "@/lib/fpixel"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,7 +38,7 @@ export function Navbar() {
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-2.5 group">
             <Image
-              src="/logo-icon.png"
+              src="/Trillon isologo amarillo.png"
               alt="TrillonGraf Logo"
               width={40}
               height={40}
@@ -59,7 +60,11 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Link href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." target="_blank">
+            <Link 
+              href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." 
+              target="_blank"
+              onClick={() => trackWhatsAppClick("navbar_desktop", { button_text: "Pedir Presupuesto" })}
+            >
             <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold cursor-pointer flex items-center gap-2">
               <WhatsAppIcon size={18} />
               Pedir Presupuesto
@@ -93,7 +98,11 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Link href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." target="_blank">
+            <Link 
+              href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." 
+              target="_blank"
+              onClick={() => trackWhatsAppClick("navbar_mobile", { button_text: "Pedir Presupuesto" })}
+            >
             <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold cursor-pointer flex items-center gap-2 w-full justify-center">
               <WhatsAppIcon size={18} />
               Pedir Presupuesto

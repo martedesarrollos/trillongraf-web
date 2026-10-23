@@ -5,6 +5,7 @@ import { ArrowDown } from "lucide-react"
 import Link from "next/link"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { motion, useReducedMotion } from "framer-motion"
+import { trackWhatsAppClick } from "@/lib/fpixel"
 
 export function HeroSection() {
   const shouldReduceMotion = useReducedMotion()
@@ -104,7 +105,11 @@ export function HeroSection() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
-          <Link href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." target="_blank">
+          <Link 
+            href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." 
+            target="_blank"
+            onClick={() => trackWhatsAppClick("hero_button", { button_text: "WhatsApp" })}
+          >
             <Button
               size="lg"
               className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold text-lg px-8 py-6 w-full sm:w-auto cursor-pointer transition-transform active:scale-95 shadow-[0_4px_20px_rgba(250,204,21,0.2)] hover:shadow-[0_4px_25px_rgba(250,204,21,0.35)] flex items-center justify-center"

@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { X } from "lucide-react"
 import { usePathname } from "next/navigation"
+import { trackWhatsAppClick } from "@/lib/fpixel"
 
 export function FloatingWhatsApp() {
   const pathname = usePathname()
@@ -50,6 +51,7 @@ export function FloatingWhatsApp() {
               href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("floating_tooltip", { button_text: "Dudas Escribinos" })}
               className="pr-4 text-xs font-bold tracking-wide uppercase hover:text-yellow-400 transition-colors duration-200"
             >
               🚀 ¿Tenés dudas? ¡Escribinos!
@@ -82,6 +84,7 @@ export function FloatingWhatsApp() {
           href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick("floating_bubble", { button_text: "Floating Bubble" })}
           className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#20ba5a] transition-all duration-300 border-2 border-white/20 select-none group-hover:scale-105 active:scale-95 cursor-pointer"
           aria-label="Chatear por WhatsApp"
         >

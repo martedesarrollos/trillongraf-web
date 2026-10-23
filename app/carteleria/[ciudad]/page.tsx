@@ -5,6 +5,7 @@ import Image from "next/image"
 import { CITIES, CITIES_LIST, type CityConfig } from "@/lib/cities"
 import { Button } from "@/components/ui/button"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { TrackedWhatsAppLink } from "@/components/tracked-whatsapp-link"
 import { 
   ArrowRight, 
   MapPin, 
@@ -101,7 +102,7 @@ export default async function CityPage({ params }: CityPageProps) {
         <div className="container mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             <Image
-              src="/logo-icon.png"
+              src="/Trillon isologo amarillo.png"
               alt="TrillonGraf Logo"
               width={32}
               height={32}
@@ -120,7 +121,11 @@ export default async function CityPage({ params }: CityPageProps) {
               <ArrowLeft size={16} />
               <span className="hidden sm:inline">Volver a la</span> Web Principal
             </Link>
-            <Link href={whatsappUrl} target="_blank">
+            <TrackedWhatsAppLink 
+              href={whatsappUrl} 
+              source="landing_city_header" 
+              details={{ city: city.name, slug: city.slug }}
+            >
               <Button
                 size="sm"
                 className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold text-xs sm:text-sm shadow-md"
@@ -128,7 +133,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 <WhatsAppIcon className="mr-1.5" size={16} />
                 <span>WhatsApp</span>
               </Button>
-            </Link>
+            </TrackedWhatsAppLink>
           </div>
         </div>
       </header>
@@ -173,7 +178,12 @@ export default async function CityPage({ params }: CityPageProps) {
                   <ArrowRight size={18} />
                 </Button>
               </Link>
-              <Link href={whatsappUrl} target="_blank" className="w-full sm:w-auto">
+              <TrackedWhatsAppLink 
+                href={whatsappUrl} 
+                className="w-full sm:w-auto"
+                source="landing_city_hero" 
+                details={{ city: city.name, slug: city.slug }}
+              >
                 <Button
                   size="lg"
                   variant="outline"
@@ -182,7 +192,7 @@ export default async function CityPage({ params }: CityPageProps) {
                   <WhatsAppIcon size={18} />
                   <span>Presupuesto en {city.name}</span>
                 </Button>
-              </Link>
+              </TrackedWhatsAppLink>
             </div>
           </div>
         </section>
@@ -290,7 +300,11 @@ export default async function CityPage({ params }: CityPageProps) {
                       <ArrowRight size={18} />
                     </Button>
                   </Link>
-                  <Link href={whatsappUrl} target="_blank">
+                  <TrackedWhatsAppLink 
+                    href={whatsappUrl} 
+                    source="landing_city_bridge" 
+                    details={{ city: city.name, slug: city.slug }}
+                  >
                     <Button
                       size="lg"
                       variant="outline"
@@ -299,7 +313,7 @@ export default async function CityPage({ params }: CityPageProps) {
                       <WhatsAppIcon className="mr-2" size={18} />
                       Consultar Ahora
                     </Button>
-                  </Link>
+                  </TrackedWhatsAppLink>
                 </div>
               </div>
             </div>
@@ -317,9 +331,14 @@ export default async function CityPage({ params }: CityPageProps) {
             Página Principal
           </Link>
           <span>•</span>
-          <Link href={whatsappUrl} target="_blank" className="hover:text-yellow-400 transition-colors">
+          <TrackedWhatsAppLink 
+            href={whatsappUrl} 
+            className="hover:text-yellow-400 transition-colors"
+            source="landing_city_footer" 
+            details={{ city: city.name, slug: city.slug }}
+          >
             WhatsApp
-          </Link>
+          </TrackedWhatsAppLink>
         </div>
       </footer>
     </div>

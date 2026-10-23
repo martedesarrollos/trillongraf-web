@@ -1,6 +1,9 @@
+"use client"
+
 import { MapPin, Phone, Mail, Instagram, Facebook, Linkedin } from "lucide-react"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import Image from "next/image"
+import { trackWhatsAppClick } from "@/lib/fpixel"
 
 export function Footer() {
   return (
@@ -11,7 +14,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2.5 mb-4 group">
               <Image
-                src="/logo-icon.png"
+                src="/Trillon isologo amarillo.png"
                 alt="TrillonGraf Logo"
                 width={36}
                 height={36}
@@ -29,6 +32,7 @@ export function Footer() {
                 href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick("footer_social_icon")}
                 className="bg-neutral-800 hover:bg-yellow-400 hover:text-black p-2 rounded transition-colors"
                 aria-label="WhatsApp"
               >
@@ -102,6 +106,7 @@ export function Footer() {
                   href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("footer_phone_link")}
                   className="flex items-start gap-2 hover:text-yellow-400 transition-colors group cursor-pointer"
                 >
                   <WhatsAppIcon size={18} className="text-yellow-400 flex-shrink-0 mt-0.5" />

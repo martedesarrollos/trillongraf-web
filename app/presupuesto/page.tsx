@@ -319,7 +319,7 @@ export default function BudgetPage() {
             </Link>
             <div className="flex items-center gap-2">
               <Image 
-                src="/logo-icon.png" 
+                src="/Trillon isologo amarillo.png" 
                 alt="TrillonGraf Logo" 
                 width={30} 
                 height={30} 
@@ -704,7 +704,7 @@ export default function BudgetPage() {
                   <div className="flex flex-col gap-2.5">
                     <div className="flex items-center gap-2">
                       <img 
-                        src="/logo-icon.png" 
+                        src="/Trillon isologo amarillo.png" 
                         alt="TrillonGraf" 
                         className="h-10 w-10 object-contain"
                       />
