@@ -27,6 +27,21 @@ export const metadata: Metadata = {
     siteName: "TrillonGraf",
     locale: "es_AR",
     type: "website",
+    images: [
+      {
+        url: "/trillongraf-logo-horizontal.jpg",
+        width: 1200,
+        height: 630,
+        alt: "TrillonGraf - Fábrica de Carteles y Publicidad",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fábrica de Carteles y Letreros | Gran Rosario y Cordón Industrial",
+    description:
+      "Fábrica de cartelería y publicidad en Gran Rosario, Granadero Baigorria y San Lorenzo. Diseño y montaje de carteles luminosos LED, letras corpóreas 3D y marquesinas.",
+    images: ["/trillongraf-logo-horizontal.jpg"],
   },
   icons: {
     icon: [
@@ -51,7 +66,7 @@ const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "TrillonGraf - Cartelería y Publicidad",
-  "image": "https://trillongraf.com.ar/icon.png",
+  "image": "https://trillongraf.com.ar/trillongraf-logo-horizontal.jpg",
   "url": "https://trillongraf.com.ar",
   "telephone": "+5493413258979",
   "priceRange": "$$",

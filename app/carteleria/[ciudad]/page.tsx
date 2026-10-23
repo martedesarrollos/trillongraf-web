@@ -54,6 +54,20 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       siteName: "TrillonGraf",
       locale: "es_AR",
       type: "website",
+      images: [
+        {
+          url: "https://trillongraf.com.ar/trillongraf-logo-horizontal.jpg",
+          width: 1200,
+          height: 630,
+          alt: `TrillonGraf - Cartelería en ${city.name}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: pageDescription,
+      images: ["https://trillongraf.com.ar/trillongraf-logo-horizontal.jpg"],
     },
   }
 }
@@ -75,7 +89,7 @@ export default async function CityPage({ params }: CityPageProps) {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `TrillonGraf - Cartelería en ${city.name}`,
-    "image": "https://trillongraf.com.ar/icon.png",
+    "image": "https://trillongraf.com.ar/trillongraf-logo-horizontal.jpg",
     "url": `https://trillongraf.com.ar/carteleria/${city.slug}`,
     "telephone": "+5493413258979",
     "priceRange": "$$",
