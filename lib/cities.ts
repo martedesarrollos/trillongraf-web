@@ -163,6 +163,125 @@ export const CITIES: Record<string, CityConfig> = {
       "Asesoramiento y visita técnica en tu local.",
     ],
   },
+  "villa-gobernador-galvez": {
+    slug: "villa-gobernador-galvez",
+    name: "Villa Gobernador Gálvez",
+    department: "Gran Rosario",
+    badge: "Fabricación e Instalación en VGG",
+    title: "Carteles y Cartelería en Villa Gobernador Gálvez",
+    description:
+      "Fabricación de carteles publicitarios, marquesinas y letras corpóreas para comercios, talleres e industrias en Villa Gobernador Gálvez (VGG). Estructuras de alta durabilidad y visibilidad comercial.",
+    zoneDescription:
+      "Cobertura en toda la zona comercial, corredores industriales y avenidas principales de Villa Gobernador Gálvez.",
+    highlights: [
+      "Marquesinas frontlight y backlight para frentes de locales.",
+      "Carteles luminosos LED de bajo consumo.",
+      "Letras corpóreas 3D en polyfan, chapa y acrílico.",
+      "Ploteo de camionetas y furgones comerciales.",
+    ],
+  },
+  "timbues": {
+    slug: "timbues",
+    name: "Timbúes",
+    department: "Cordón Industrial",
+    badge: "Cartelería Comercial e Industrial en Timbúes",
+    title: "Carteles y Cartelería en Timbúes",
+    description:
+      "Cartelería industrial, señalética de seguridad y marquesinas comerciales en Timbúes. Soluciones metálicas reforzadas preparadas para el polo portuario, cerealero y comercial del norte del cordón industrial.",
+    zoneDescription:
+      "Atendemos empresas portuarias, contratistas, transportes y locales comerciales sobre Ruta 11 y accesos a Timbúes.",
+    highlights: [
+      "Cartelería y señalética industrial de alta resistencia climática.",
+      "Marquesinas estructurales para empresas y depósitos.",
+      "Ploteo de camiones, camionetas y vehículos de flota.",
+      "Estructuras calculadas para intemperie y fuertes vientos.",
+    ],
+  },
+  "alvear": {
+    slug: "alvear",
+    name: "Alvear",
+    department: "Gran Rosario",
+    badge: "Cartelería Comercial e Industrial en Alvear",
+    title: "Carteles y Cartelería en Alvear",
+    description:
+      "Especialistas en cartelería para empresas, plantas logísticas y locales comerciales en Alvear. Fabricación de tótems, letreros luminosos, letras corpóreas y señalética corporativa.",
+    zoneDescription:
+      "Cobertura integral en el Parque Industrial de Alvear, Autopista Rosario-Bs.As., Ruta 21 y zona urbana.",
+    highlights: [
+      "Cartelería de gran porte para parques industriales y galpones.",
+      "Tótems y letreros de altura de alto impacto visual.",
+      "Letras corpóreas 3D para recepciones y fachadas de empresas.",
+      "Montaje profesional con normas de seguridad en altura.",
+    ],
+  },
+  "arroyo-seco": {
+    slug: "arroyo-seco",
+    name: "Arroyo Seco",
+    department: "Gran Rosario",
+    badge: "Fabricación e Instalación en Arroyo Seco",
+    title: "Carteles y Cartelería en Arroyo Seco",
+    description:
+      "Diseño y fabricación de carteles comerciales, marquesinas y letras corpóreas en Arroyo Seco. Calidad industrial, durabilidad y montaje garantizado para tu negocio o local.",
+    zoneDescription:
+      "Servicio en el centro comercial de Arroyo Seco, Ruta 21, accesos y zona fabril ribereña.",
+    highlights: [
+      "Marquesinas comerciales modernas con lona tensada premium.",
+      "Carteles luminosos LED y neón para vidrieras y locales.",
+      "Letras corpóreas de polyfan y metal con luz indirecta.",
+      "Asesoramiento y presupuesto directo de fábrica.",
+    ],
+  },
+  "ricardone": {
+    slug: "ricardone",
+    name: "Ricardone",
+    department: "Cordón Industrial",
+    badge: "Fabricación e Instalación en Ricardone",
+    title: "Carteles y Cartelería en Ricardone",
+    description:
+      "Fabricación y colocación de carteles luminosos, marquesinas y letras corpóreas en Ricardone. Atención rápida y personalizada para locales y empresas del corredor de la Ruta A012.",
+    zoneDescription:
+      "Cobertura sobre Ruta A012, accesos viales, centro de Ricardone y loteos comerciales.",
+    highlights: [
+      "Cartelería de alta visibilidad para rutas y avenidas.",
+      "Marquesinas frontlight y backlight para negocios.",
+      "Letras corpóreas en relieve con terminaciones premium.",
+      "Entrega y montaje llave en mano.",
+    ],
+  },
+  "perez": {
+    slug: "perez",
+    name: "Pérez",
+    department: "Gran Rosario",
+    badge: "Fabricación e Instalación en Pérez",
+    title: "Carteles y Cartelería en Pérez",
+    description:
+      "Soluciones integrales de cartelería, letreros luminosos y letras corpóreas para comercios y fábricas en Pérez. Estructuras metálicas durables con instalación profesional.",
+    zoneDescription:
+      "Atendemos la avenida Belgrano (Ruta 33), área industrial y locales comerciales en Pérez.",
+    highlights: [
+      "Marquesinas luminosas y frentes comerciales completos.",
+      "Corpóreos 3D y letreros LED de bajo consumo.",
+      "Ploteo de vehículos comerciales y utilitarios.",
+      "Presupuesto rápido y colocación en obra.",
+    ],
+  },
+  "pueblo-esther": {
+    slug: "pueblo-esther",
+    name: "Pueblo Esther",
+    department: "Gran Rosario",
+    badge: "Fabricación e Instalación en Pueblo Esther",
+    title: "Carteles y Cartelería en Pueblo Esther",
+    description:
+      "Cartelería publicitaria de diseño, letras corpóreas y marquesinas para locales comerciales y desarrollos en Pueblo Esther. Visibilidad estética tanto de día como de noche.",
+    zoneDescription:
+      "Servicio sobre corredor de la Ruta 21, centros comerciales y áreas de servicios de Pueblo Esther.",
+    highlights: [
+      "Carteles luminosos con diseño estético y moderno.",
+      "Neón LED para bares, locales gastronómicos y comercios.",
+      "Letras corpóreas en polyfan y acrílico.",
+      "Instalación limpia y garantizada.",
+    ],
+  },
 }
 
 export const CITIES_LIST = Object.values(CITIES)

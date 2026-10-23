@@ -9,6 +9,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/carteleria/vgg',
+        destination: '/carteleria/villa-gobernador-galvez',
+        permanent: true,
+      },
+      {
         source: '/:path*',
         has: [
           {
