@@ -97,7 +97,7 @@ export function HeroSection() {
           className="text-lg sm:text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto text-balance font-medium"
         >
           Llevamos tu imagen al mundo real. <br className="hidden sm:inline" />
-          Diseño, fabricación y montaje de cartelería publicitaria de alto impacto.
+          Diseño, fabricación y montaje de cartelería de alto impacto.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -124,7 +124,7 @@ export function HeroSection() {
               variant="outline"
               className="border-2 border-neutral-600 text-white hover:bg-neutral-800/80 font-bold text-lg px-8 py-6 w-full sm:w-auto bg-transparent cursor-pointer transition-colors"
             >
-              Ver Trabajos
+              Ver Showroom
             </Button>
           </Link>
         </motion.div>
@@ -138,7 +138,7 @@ export function HeroSection() {
             href="#showroom"
             className="inline-flex flex-col items-center text-neutral-400 hover:text-yellow-400 transition-colors group cursor-pointer"
           >
-            <span className="text-sm mb-2 group-hover:translate-y-[-2px] transition-transform duration-300">Conocé nuestro showroom interactivo</span>
+            <span className="text-sm mb-2 group-hover:translate-y-[-2px] transition-transform duration-300">Conocé nuestros trabajos/servicios</span>
             <ArrowDown size={24} className="animate-bounce" />
           </a>
         </motion.div>

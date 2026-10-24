@@ -28,6 +28,10 @@ const faqItems = [
   {
     question: "¿Cuál es la zona de cobertura para la fabricación e instalación de cartelería y ploteos?",
     answer: "Nuestra base y taller de fabricación se encuentran en Granadero Baigorria, Santa Fe. Realizamos mediciones, colocaciones y montajes profesionales en toda la zona del Gran Rosario (Rosario, San Lorenzo, Capitán Bermúdez, Funes, Roldán, Ibarlucea, etc.) y en el cordón industrial santafesino. Asimismo, fabricamos y despachamos carteles corpóreos 3D y marquesinas preensambladas listas para instalar, con envíos seguros y embalaje reforzado a todo el país."
+  },
+  {
+    question: "¿Realizan fabricación y alquiler de mástiles, banderas y fly banners para empresas y eventos?",
+    answer: "Sí, en TrillonGraf fabricamos y alquilamos mástiles fijos y portátiles para empresas, negocios y eventos en todo el Gran Rosario y Santa Fe. Confeccionamos banderas publicitarias institucionales y fly banners (formatos gota y pluma) en telas náuticas y sublimación de alta definición resistente a la intemperie. Ofrecemos servicio de alquiler de mástiles con bases para ferias, exposiciones y actos corporativos."
   }
 ]
 

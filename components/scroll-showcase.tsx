@@ -12,8 +12,8 @@ const showcaseTabs = [
     tagline: "Relieve y Elegancia 3D",
     description: "Fabricación de letras tridimensionales en polyfan, acrílico y metales con iluminación de fondo (backlight) o frontal. Aportan una estética premium e institucional inigualable.",
     accentColor: "from-yellow-400 to-amber-500",
-    image: "/corporeo-xeroff.jpg",
-    details: ["Efecto de sombra flotante (Backlight)", "Terminaciones en acrílico brillante y metal", "Corte computarizado de alta precisión", "Instalación en altura garantizada"]
+    image: "/house-27-san-lorenzo.jpg",
+    details: ["Iluminación LED estanca IP67 de alta potencia", "Terminaciones en acrílico y chapa tratada", "Corte computarizado de alta precisión", "Instalación en altura garantizada"]
   },
   {
     id: "neon",
@@ -221,7 +221,7 @@ export function ScrollShowcase() {
                           <span className="text-yellow-400 text-xs font-black uppercase tracking-widest bg-black/60 px-2.5 py-1 rounded w-max mb-1">
                             Montaje Realizado
                           </span>
-                          <span className="text-white text-sm font-bold">XEROFF - Letras de Acrílico Retroiluminadas</span>
+                          <span className="text-white text-sm font-bold">House 27 - Cartel Corpóreo con Iluminación LED IP67 (San Lorenzo)</span>
                         </div>
                       </div>
                     </div>

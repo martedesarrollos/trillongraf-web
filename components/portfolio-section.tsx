@@ -18,7 +18,7 @@ const portfolioItems = [
   {
     id: 2,
     category: "Cartelería",
-    title: "Lona front con estructura en caño estructural (Cordón Industrial)",
+    title: "Lona front con estructura en caño estructural (Granadero Baigorria)",
     src: "/lona-messi.jpg",
     height: "medium"
   },
@@ -32,7 +32,7 @@ const portfolioItems = [
   {
     id: 4,
     category: "Vidriera",
-    title: "Ploteo y rotulación premium de vidriera comercial (Rosario)",
+    title: "Ploteo y rotulación premium de vidriera comercial (Puerto Tifon)",
     src: "/imstore.jpeg",
     height: "tall"
   },
@@ -70,6 +70,27 @@ const portfolioItems = [
     title: "Letras corpóreas en Polyfan con acabado premium para local comercial (Gran Rosario)",
     src: "/alyna.JPEG",
     height: "medium"
+  },
+  {
+    id: 10,
+    category: "Ploteos",
+    title: "Cartel corpóreo con iluminación LED IP67 - Boliche House 27 (San Lorenzo)",
+    src: "/house-27-san-lorenzo.JPEG",
+    height: "tall"
+  },
+  {
+    id: 11,
+    category: "Corpóreos",
+    title: "Ploteo de contenedor 7x3 - Boliche House 27 (San Lorenzo)",
+    src: "/house-27 -contenedor.jpeg",
+    height: "tall"
+  },
+  {
+    id: 12,
+    category: "Cartelería",
+    title: "Fabricación de mástil y bandera institucional para empresa - Rafasa",
+    src: "/mastil-rafasa.JPEG",
+    height: "tall"
   }
 ]
 

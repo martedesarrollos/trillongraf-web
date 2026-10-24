@@ -3,30 +3,29 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import { useIsMobile } from "@/hooks/use-mobile"
-import { Box, Lightbulb, Car, Shield, ChevronRight, ChevronLeft, Hammer, Palette, Zap } from "lucide-react"
+import { Box, Lightbulb, Car, Shield, ChevronRight, ChevronLeft, Hammer, Palette, Zap, Flag } from "lucide-react"
 
 const services = [
   {
     title: "Letreros Corpóreos 3D",
     subtitle: "Relieve y Elegancia Corporativa",
-    description: "Letras y logotipos 3D personalizados. Ideales para recepciones, oficinas y fachadas comerciales. Retroiluminación LED para asegurar máxima visibilidad, distinción y elegancia institucional las 24 horas.",
     icon: Box,
     images: [
+      "/house-27-san-lorenzo.JPEG",
       "/corporeo-xeroff.jpg",
       "/costa_nueva.JPEG"
     ],
     accent: "text-yellow-400 border-yellow-500/20 bg-yellow-500/5",
     details: [
       "Diseño a medida y relieve 3D flotante",
-      "Materiales premium: acrílico, aluminio, acero inoxidable, chapa y polyfan",
-      "Iluminación LED interna de larga vida útil",
+      "Materiales premium: acrílico, aluminio, chapa y polyfan",
+      "Iluminación LED IP65 de alta potencia",
       "Instalación profesional con plantillas de precisión"
     ]
   },
   {
     title: "Cartelería y Marquesinas",
     subtitle: "Publicidad Exterior de Alto Impacto",
-    description: "Diseño y fabricación de carteles luminosos, marquesinas de gran formato y vidrieras comerciales. Especialistas en cartelería Frontlight y Backlight con lona tensada premium impresa en alta resolución. Incorporamos sistemas de iluminación LED de alta eficiencia energética para destacar tu local tanto de día como de noche.",
     icon: Lightbulb,
     images: [
       "/dulcereino.JPEG",
@@ -36,16 +35,15 @@ const services = [
     accent: "text-fuchsia-400 border-fuchsia-500/20 bg-fuchsia-500/5",
     details: [
       "Marquesinas frontlight y backlight premium",
-      "Lonas tensadas resistentes a la intemperie",
+      "Lonas y vinilos resistentes a la intemperie",
       "Luminarias LED integradas de bajo consumo",
-      "Neón LED personalizado y carteles vintage"
+      "Estructuras livianas y adaptadas a tu espacio"
     ]
   },
   
   {
     title: "Ploteo Vehicular & Flotas",
-    subtitle: "Publicidad Móvil las 24 Horas",
-    description: "Rotulación total o parcial de vehículos de trabajo, utilitarios, camionetas, camiones y flotas de distribución comercial completa. Diseñamos piezas publicitarias adaptadas al chasis de cada marca de auto, utilizando vinilos vehiculares premium resistentes a la intemperie, rayos UV, lavados de alta presión y desgaste vial.",
+    subtitle: "Tu imagen en movimiento",
     icon: Car,
     images: [
       "/ambulancia.JPEG",
@@ -54,9 +52,9 @@ const services = [
     ],
     accent: "text-blue-400 border-blue-500/20 bg-blue-500/5",
     details: [
-      "Protección de la pintura de fábrica del chasis",
-      "Vinilos premium de alta durabilidad (Oracal/3M)",
-      "Rotulación de flotas en tiempos récord",
+      "Protección de la pintura de fábrica",
+      "Vinilos premium de alta durabilidad",
+      "Rotulación de flotas",
       "Remoción limpia sin dejar residuos de pegamento"
     ]
   },
@@ -64,7 +62,6 @@ const services = [
   {
     title: "Carteles de Neón LED",
     subtitle: "Iluminación Moderna de Alto Impacto",
-    description: "Diseño y fabricación de carteles de neón LED personalizados. Diseños vibrantes de bajo consumo, alta luminosidad y larga durabilidad. Ideales para ambientar interiores comerciales, fachadas, eventos y logotipos corporativos que captan la atención al instante.",
     icon: Zap,
     images: [
       "/neon-led.jpg",
@@ -76,7 +73,25 @@ const services = [
       "Diseños 100% personalizados y tipografías a elección",
       "Tecnología LED de alta eficiencia y bajo consumo",
       "Base de acrílico cristal de alta resistencia",
-      "Fácil instalación con transformador de 12v incluido"
+      "Fácil instalación"
+    ]
+  },
+
+  {
+    title: "Fabricación y Alquiler de Mástiles y Banderas",
+    subtitle: "Para Eventos, Empresas y Negocios",
+    icon: Flag,
+    images: [
+      "/mastil-rafasa.JPEG",
+      "/banderas.jpg"
+    ],
+    accent: "text-emerald-400 border-emerald-500/20 bg-emerald-500/5",
+    aspectRatio: "portrait",
+    details: [
+      "Mástiles portátiles y fijos de alta resistencia",
+      "Banderas y fly banners personalizados (gota y pluma)",
+      "Alquiler por jornada para eventos, ferias y lanzamientos",
+      "Telas de poliester y sublimación aptas intemperie y viento"
     ]
   }
 ]
@@ -84,11 +99,13 @@ const services = [
 interface ServiceCarouselProps {
   images: string[]
   title: string
+  aspectRatio?: "portrait" | "landscape"
 }
 
-function ServiceCarousel({ images, title }: ServiceCarouselProps) {
+function ServiceCarousel({ images, title, aspectRatio = "landscape" }: ServiceCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const shouldReduceMotion = useReducedMotion()
+  const isPortrait = aspectRatio === "portrait"
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
@@ -146,7 +163,11 @@ function ServiceCarousel({ images, title }: ServiceCarouselProps) {
 
   return (
     <div
-      className="relative w-full aspect-video md:aspect-[16/10] rounded-2xl overflow-hidden border border-neutral-800/60 bg-neutral-950 group"
+      className={`relative w-full rounded-2xl overflow-hidden border border-neutral-800/60 bg-neutral-950 group shadow-xl ${
+        isPortrait
+          ? "max-w-[280px] sm:max-w-[320px] aspect-[9/16] mx-auto"
+          : "aspect-video md:aspect-[16/10]"
+      }`}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -162,7 +183,7 @@ function ServiceCarousel({ images, title }: ServiceCarouselProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: shouldReduceMotion ? 0 : -30 }}
             transition={{ duration: 0.3 }}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
             draggable={false}
           />
         </AnimatePresence>
@@ -233,8 +254,10 @@ export function ServicesSection() {
   return (
     <section
       id="servicios"
-      className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-neutral-950 overflow-hidden"
+      className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-neutral-950 overflow-hidden relative"
     >
+      {/* Anchor for hero button navigation */}
+      <div id="showroom" className="absolute -top-16 left-0" />
       <div className="container mx-auto">
         
         {/* Section Header */}
@@ -262,6 +285,7 @@ export function ServicesSection() {
           {services.map((service, index) => {
             const Icon = service.icon
             const isEven = index % 2 !== 0
+            const isPortrait = service.aspectRatio === "portrait"
 
             return (
               <motion.div
@@ -276,31 +300,27 @@ export function ServicesSection() {
                 }`}
               >
                 {/* Visual Image Side: Service Carousel */}
-                <div className={`lg:col-span-6 relative w-full ${isEven ? "lg:order-last" : ""}`}>
-                  <ServiceCarousel images={service.images} title={service.title} />
+                <div className={`relative w-full ${isPortrait ? "lg:col-span-4 flex justify-center" : "lg:col-span-6"} ${isEven ? "lg:order-last" : ""}`}>
+                  <ServiceCarousel images={service.images} title={service.title} aspectRatio={service.aspectRatio} />
                 </div>
 
                 {/* Copywriting Details Side */}
-                <div className="lg:col-span-6 flex flex-col justify-center space-y-4 px-2">
+                <div className={`${isPortrait ? "lg:col-span-8 lg:px-4" : "lg:col-span-6 px-2"} flex flex-col justify-center space-y-5`}>
                   <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border font-bold text-xs uppercase tracking-wider w-max ${service.accent}`}>
                     <Icon size={16} />
                     <span>{service.subtitle}</span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-none">
+                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
                     {service.title}
                   </h3>
 
-                  <p className="text-neutral-400 leading-relaxed text-sm sm:text-base">
-                    {service.description}
-                  </p>
-
                   <div className="pt-2 border-t border-neutral-800/60">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {service.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-neutral-300">
-                          <ChevronRight className="text-yellow-400 flex-shrink-0" size={14} />
-                          <span>{detail}</span>
+                        <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-300">
+                          <ChevronRight className="text-yellow-400 flex-shrink-0 mt-0.5" size={14} />
+                          <span className="leading-snug">{detail}</span>
                         </li>
                       ))}
                     </ul>
@@ -312,6 +332,78 @@ export function ServicesSection() {
         </div>
 
       </div>
+
+      {/* Sección semántica oculta para indexación en la búsqueda de Google */}
+      <section className="sr-only" aria-label="Fabricación y alquiler de mástiles, banderas y fly banners">
+        <h2>Fabricación y Alquiler de Mástiles, Banderas Publicitarias y Fly Banners para Negocios y Empresas</h2>
+        <p>
+          En TrillonGraf nos especializamos en la fabricación y alquiler de mástiles para eventos, negocios y empresas en Rosario, Granadero Baigorria, San Lorenzo y todo el cordón industrial de Santa Fe.
+        </p>
+        <p>
+          Diseñamos y confeccionamos banderas institucionales, banderas publicitarias de exterior e interior, y fly banners en formatos pluma, gota y vela con impresión textil sublimada de alta definición resistente a los rayos UV, lavado y vientos fuertes.
+        </p>
+        <h3>Servicios de Mástiles y Banderas para Empresas y Comercios:</h3>
+        <ul>
+          <li>Fabricación de mástiles telescópicos, mástiles fijos de caño estructural y mástiles portátiles con bases pesadas o estacas.</li>
+          <li>Alquiler de mástiles y banderas publicitarias por jornada para ferias, congresos, exposiciones y eventos corporativos.</li>
+          <li>Fly banners personalizados para locales comerciales, estaciones de servicio, concesionarias y eventos al aire libre.</li>
+          <li>Banderas institucionales con logo corporativo para mástiles de fachada en parques industriales y fábricas.</li>
+        </ul>
+      </section>
+
+      {/* Structured Data Schema.org para Google Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Fabricación y Alquiler de Mástiles, Banderas y Fly Banners",
+            "serviceType": "Mástiles y Banderas Publicitarias para Eventos y Negocios",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "TrillonGraf - Fábrica de Cartelería y Publicidad",
+              "telephone": "+5493413258979",
+              "url": "https://trillongraf.com.ar"
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Rosario" },
+              { "@type": "City", "name": "Granadero Baigorria" },
+              { "@type": "City", "name": "San Lorenzo" },
+              { "@type": "AdministrativeArea", "name": "Gran Rosario" },
+              { "@type": "AdministrativeArea", "name": "Santa Fe" }
+            ],
+            "description": "Fabricación y alquiler de mástiles y banderas publicitarias para eventos y negocios. Confección de fly banners tipo gota y pluma para empresas en Rosario y Santa Fe.",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Mástiles y Banderas",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Fabricación de mástiles fijos y portátiles para empresas"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Alquiler de mástiles para eventos y exposiciones"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Fly banners y banderas publicitarias para negocios y empresas"
+                  }
+                }
+              ]
+            }
+          })
+        }}
+      />
     </section>
   )
 }
