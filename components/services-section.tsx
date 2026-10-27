@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Box, Lightbulb, Car, Shield, ChevronRight, ChevronLeft, Hammer, Palette, Zap, Flag } from "lucide-react"
@@ -316,7 +317,7 @@ export function ServicesSection() {
                   </h3>
 
                   <div className="pt-2 border-t border-neutral-800/60">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
                       {service.details.map((detail, idx) => (
                         <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-300">
                           <ChevronRight className="text-yellow-400 flex-shrink-0 mt-0.5" size={14} />
@@ -324,6 +325,18 @@ export function ServicesSection() {
                         </li>
                       ))}
                     </ul>
+
+                    {service.title.includes("Mástiles") && (
+                      <div className="pt-3 border-t border-neutral-800/60">
+                        <Link
+                          href="/mastiles"
+                          className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-yellow-400 hover:text-yellow-300 transition-colors group cursor-pointer"
+                        >
+                          <span>Ver catálogo de mástiles, medidas y alquiler</span>
+                          <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>

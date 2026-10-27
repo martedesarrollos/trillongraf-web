@@ -287,6 +287,24 @@ export default async function CityPage({ params }: CityPageProps) {
                 ))}
               </ul>
             </div>
+
+            {/* Red de Cobertura Regional / Otras Localidades */}
+            <div className="mt-8 p-6 rounded-2xl bg-neutral-950/70 border border-neutral-800/80">
+              <h4 className="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-3">
+                También fabricamos e instalamos en todo el Gran Rosario y Cordón Industrial:
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {CITIES_LIST.filter((c) => c.slug !== city.slug).map((c) => (
+                  <Link
+                    key={c.slug}
+                    href={`/carteleria/${c.slug}`}
+                    className="text-xs bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-yellow-400 px-3 py-1.5 rounded-lg border border-neutral-800/80 transition-colors"
+                  >
+                    Carteles en {c.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -338,11 +356,15 @@ export default async function CityPage({ params }: CityPageProps) {
       {/* Minimal Footer */}
       <footer className="border-t border-neutral-900 py-8 px-4 text-center text-xs text-neutral-500">
         <p className="mb-2">
-          © {new Date().getFullYear()} TrillonGraf. Cartelería y Publicidad en {city.name} y el Gran Rosario.
+          © {new Date().getFullYear()} TrillonGraf. Cartelería y Publicidad en {city.name}, Gran Rosario y Cordón Industrial.
         </p>
         <div className="flex items-center justify-center gap-4 text-neutral-400 font-medium">
           <Link href="/" className="hover:text-yellow-400 transition-colors">
             Página Principal
+          </Link>
+          <span>•</span>
+          <Link href="/mastiles" className="hover:text-yellow-400 transition-colors">
+            Mástiles y Banderas
           </Link>
           <span>•</span>
           <TrackedWhatsAppLink 

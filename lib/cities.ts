@@ -153,11 +153,11 @@ export const CITIES: Record<string, CityConfig> = {
     badge: "Fabricación e Instalación en Ibarlucea",
     title: "Carteles y Cartelería en Ibarlucea",
     description:
-      "Carteles luminosos, letras corpóreas y marquesinas para negocios en Ibarlucea. Por nuestra cercanía inmediata en Baigorria, brindamos atención exprés y presupuestos rápidos.",
+      "Carteles luminosos, letras corpóreas y marquesinas para negocios en Ibarlucea. Brindamos atención exprés, asesoramiento técnico y presupuestos rápidos para comercios del Gran Rosario.",
     zoneDescription:
       "Atendemos sobre Ruta 34, centros comerciales y nuevos corredores residenciales y comerciales de Ibarlucea.",
     highlights: [
-      "Respuesta inmediata por cercanía logística directa.",
+      "Cobertura logística y entrega rápida en la localidad.",
       "Cartelería para locales comerciales y profesionales.",
       "Marquesinas y frentes comerciales completos.",
       "Asesoramiento y visita técnica en tu local.",

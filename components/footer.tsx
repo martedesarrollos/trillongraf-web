@@ -3,7 +3,9 @@
 import { MapPin, Phone, Mail, Instagram, Facebook, Linkedin } from "lucide-react"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import Image from "next/image"
+import Link from "next/link"
 import { trackWhatsAppClick } from "@/lib/fpixel"
+import { CITIES_LIST } from "@/lib/cities"
 
 export function Footer() {
   return (
@@ -81,6 +83,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <Link href="/mastiles" className="hover:text-yellow-400 transition-colors font-semibold text-yellow-400/90">
+                  Mástiles y Banderas
+                </Link>
+              </li>
+              <li>
                 <a href="#galeria" className="hover:text-yellow-400 transition-colors">
                   Galería
                 </a>
@@ -99,7 +106,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin size={18} className="text-yellow-400 flex-shrink-0 mt-0.5" />
-                <span>M. Cornelio Saavedra 3393, Granadero Baigorria</span>
+                <span>Atención en todo el Gran Rosario y Cordón Industrial</span>
               </li>
               <li className="flex items-start gap-2">
                 <a
@@ -128,18 +135,40 @@ export function Footer() {
           {/* Service Areas */}
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Zonas de Servicio</h3>
-            <p className="text-sm leading-relaxed">
-              Atendemos en{" "}
+            <p className="text-sm leading-relaxed mb-3">
+              Fabricación, entrega e instalación en{" "}
               <strong className="text-yellow-400">
-                Todo el Gran Rosario  
-              </strong>{" "}
-              y enviamos a <strong className="text-yellow-400">Todo el País</strong>.
+                Todo el Gran Rosario y Cordón Industrial
+              </strong>
+              , con envíos a <strong className="text-yellow-400">Todo el País</strong>.
             </p>
           </div>
         </div>
 
+        {/* Localidades de Cobertura SEO */}
+        <div className="pt-8 pb-4 border-t border-neutral-900 text-xs">
+          <p className="font-semibold text-neutral-400 mb-2 uppercase tracking-wider text-[11px]">
+            Cartelería y Publicidad en Gran Rosario y Cordón Industrial:
+          </p>
+          <div className="flex flex-wrap gap-x-2.5 gap-y-1.5 text-neutral-400">
+            {CITIES_LIST.map((city, idx) => (
+              <span key={city.slug} className="inline-flex items-center">
+                <Link
+                  href={`/carteleria/${city.slug}`}
+                  className="hover:text-yellow-400 transition-colors"
+                >
+                  Carteles en {city.name}
+                </Link>
+                {idx < CITIES_LIST.length - 1 && (
+                  <span className="ml-2.5 text-neutral-800">•</span>
+                )}
+              </span>
+            ))}
+          </div>
+        </div>
+
         {/* Copyright */}
-        <div className="pt-8 border-t border-neutral-800 text-center text-sm">
+        <div className="pt-6 border-t border-neutral-900 text-center text-xs text-neutral-400">
           <p>© {new Date().getFullYear()} TrillonGraf. Todos los derechos reservados.</p>
         </div>
       </div>

@@ -361,7 +361,20 @@ export default function MastilesPage() {
       {/* Footer */}
       <footer className="border-t border-neutral-900 bg-neutral-950 py-8 px-4 text-center text-xs text-neutral-500">
         <p className="mb-2">© {new Date().getFullYear()} TrillonGraf. Fábrica de Cartelería y Publicidad.</p>
-        <p>Mástiles, Cartelería y Publicidad en Gran Rosario, Granadero Baigorria, San Lorenzo y Santa Fe.</p>
+        <p className="mb-3">Fabricación y alquiler de mástiles y banderas en todo el Gran Rosario, Cordón Industrial y Santa Fe.</p>
+        <div className="flex items-center justify-center gap-4 text-neutral-400 font-medium">
+          <Link href="/" className="hover:text-yellow-400 transition-colors">
+            Página Principal
+          </Link>
+          <span>•</span>
+          <Link href="/#servicios" className="hover:text-yellow-400 transition-colors">
+            Todos los Servicios
+          </Link>
+          <span>•</span>
+          <Link href="/#galeria" className="hover:text-yellow-400 transition-colors">
+            Galería de Trabajos
+          </Link>
+        </div>
       </footer>
     </div>
   )
