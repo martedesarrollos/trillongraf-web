@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://trillongraf.com.ar"),
   title: "Fábrica de Carteles y Letreros | Gran Rosario y Cordón Industrial",
   description:
-    "Fábrica de cartelería y publicidad en Gran Rosario, Granadero Baigorria y San Lorenzo. Diseño y montaje de carteles luminosos LED, letras corpóreas 3D, marquesinas, mástiles, banderas y fly banners para empresas.",
+    "Fábrica de carteles y letreros en Gran Rosario y San Lorenzo. Carteles luminosos LED, letras corpóreas 3D, marquesinas y mástiles. Presupuesto sin cargo.",
   keywords:
     "fábrica de carteles, carteles luminosos, letras corpóreas, marquesinas, rotulación vehicular, mástiles, banderas publicitarias, fly banners, alquiler de mástiles, mástiles para eventos, banderas para negocios, banderas para empresas, Granadero Baigorria, Rosario, San Lorenzo, Cordón Industrial, Gran Rosario",
   alternates: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fábrica de Carteles y Letreros | Gran Rosario y Cordón Industrial",
     description:
-      "Fábrica de cartelería y publicidad en Gran Rosario, Granadero Baigorria y San Lorenzo. Diseño y montaje de carteles luminosos LED, letras corpóreas 3D, marquesinas, mástiles y banderas publicitarias.",
+      "Fábrica de carteles y letreros en Gran Rosario y San Lorenzo. Carteles luminosos LED, letras corpóreas 3D, marquesinas y mástiles. Presupuesto sin cargo.",
     url: "https://trillongraf.com.ar",
     siteName: "TrillonGraf",
     locale: "es_AR",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fábrica de Carteles y Letreros | Gran Rosario y Cordón Industrial",
     description:
-      "Fábrica de cartelería y publicidad en Gran Rosario, Granadero Baigorria y San Lorenzo. Diseño y montaje de carteles luminosos LED, letras corpóreas 3D, marquesinas, mástiles y banderas publicitarias.",
+      "Fábrica de carteles y letreros en Gran Rosario y San Lorenzo. Carteles luminosos LED, letras corpóreas 3D, marquesinas y mástiles. Presupuesto sin cargo.",
     images: ["/trillongraf-logo-horizontal.jpg"],
   },
   icons: {

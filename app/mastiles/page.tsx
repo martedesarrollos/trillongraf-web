@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = {
   title: "Fabricación y Alquiler de Mástiles, Banderas y Fly Banners | TrillonGraf",
   description:
-    "Fabricación y alquiler de mástiles fijos y portátiles, fly banners (gota y pluma) y banderas publicitarias para eventos, ferias, negocios y empresas en Rosario, Granadero Baigorria, San Lorenzo y Santa Fe.",
+    "Fabricación y alquiler de mástiles, banderas publicitarias y fly banners para eventos y empresas en Gran Rosario y Santa Fe. Envíos y colocación.",
   keywords:
     "fabricación de mástiles, alquiler de mástiles, banderas publicitarias, fly banners, mástiles para eventos, banderas para negocios, banderas para empresas, fly banners Rosario, mástiles Santa Fe, banderas institucionales",
   alternates: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fabricación y Alquiler de Mástiles, Banderas y Fly Banners | TrillonGraf",
     description:
-      "Fabricación y alquiler de mástiles y banderas publicitarias para eventos y negocios en Gran Rosario y Santa Fe. Calidad industrial y entrega rápida.",
+      "Fabricación y alquiler de mástiles, banderas publicitarias y fly banners para eventos y empresas en Gran Rosario y Santa Fe. Envíos y colocación.",
     url: "https://trillongraf.com.ar/mastiles",
     siteName: "TrillonGraf",
     locale: "es_AR",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fabricación y Alquiler de Mástiles, Banderas y Fly Banners | TrillonGraf",
     description:
-      "Fabricación y alquiler de mástiles y banderas publicitarias para eventos y negocios en Gran Rosario y Santa Fe.",
+      "Fabricación y alquiler de mástiles, banderas publicitarias y fly banners para eventos y empresas en Gran Rosario y Santa Fe. Envíos y colocación.",
     images: ["/banderas.jpg"],
   },
 }

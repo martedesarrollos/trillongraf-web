@@ -39,17 +39,17 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   }
 
   const pageTitle = `${city.title} | TrillonGraf Fábrica`
-  const pageDescription = `${city.description}`
+  const metaDescription = `Fábrica de cartelería y letreros en ${city.name}. Carteles luminosos LED, letras corpóreas 3D y marquesinas para comercios. Cotización rápida.`
 
   return {
     title: pageTitle,
-    description: pageDescription,
+    description: metaDescription,
     alternates: {
       canonical: `/carteleria/${city.slug}`,
     },
     openGraph: {
       title: pageTitle,
-      description: pageDescription,
+      description: metaDescription,
       url: `https://trillongraf.com.ar/carteleria/${city.slug}`,
       siteName: "TrillonGraf",
       locale: "es_AR",
@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     twitter: {
       card: "summary_large_image",
       title: pageTitle,
-      description: pageDescription,
+      description: metaDescription,
       images: ["https://trillongraf.com.ar/trillongraf-logo-horizontal.jpg"],
     },
   }
