@@ -60,6 +60,11 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+  verification: {
+    other: {
+      "msvalidate.01": "C9DFE2410D8C521BFB90FF2B5BF43D1F",
+    },
+  },
 }
 
 const localBusinessJsonLd = {
