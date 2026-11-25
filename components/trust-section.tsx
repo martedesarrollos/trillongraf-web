@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState, useRef } from "react"
+import Link from "next/link"
 import { MapPin, Users, Award, Clock } from "lucide-react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
 
@@ -85,13 +86,11 @@ export function TrustSection() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 text-balance tracking-tight">
               Experiencia y Confianza en todo el <span className="text-yellow-400">Gran Rosario</span>
             </h2>
-            <p className="text-lg text-neutral-300 mb-6 leading-relaxed">
-              Con sede en <strong className="text-white">Granadero Baigorria, Santa Fe</strong>, somos especialistas en
-              cartelería y publicidad para empresas, negocios y particulares.
+            <p className="text-lg text-neutral-300 mb-4 leading-relaxed">
+              Con base y taller propio en <strong className="text-white">Granadero Baigorria, Santa Fe</strong>, en <strong className="text-yellow-400">Trillongraf Carteles</strong> somos especialistas en fabricación de cartelería publicitaria, marquesinas, letreros luminosos y letras corpóreas para empresas, comercios y particulares.
             </p>
-            <p className="text-lg text-neutral-300 mb-8 leading-relaxed">
-              Nuestro equipo combina diseño creativo, fabricación de calidad y montaje profesional para entregar
-              soluciones que destacan tu marca y cumplen con todas las normativas de seguridad.
+            <p className="text-sm text-neutral-400 mb-8 leading-relaxed">
+              Atención directa de fábrica, mediciones y relevamiento en tu local comercial de <Link href="/carteleria/granadero-baigorria" className="text-yellow-400 hover:underline font-semibold">Granadero Baigorria</Link>, Rosario, San Lorenzo y todo el cordón industrial. Cumplimos con estrictas normativas de seguridad edilicia y estructural.
             </p>
 
             {/* Stats Grid */}
@@ -122,7 +121,7 @@ export function TrustSection() {
           >
             <div className="relative rounded-2xl overflow-hidden border-4 border-yellow-400/90 shadow-2xl group w-full aspect-[4/3] bg-neutral-900">
               <iframe
-                title="Ubicación de TrillonGraf Publicidad"
+                title="Ubicación de Trillongraf Carteles en Granadero Baigorria"
                 src="https://maps.google.com/maps?q=M.%20Cornelio%20Saavedra%203393,%20Granadero%20Baigorria,%20Santa%20Fe,%20Argentina&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full border-none filter grayscale invert contrast-110 opacity-75 hover:grayscale-0 hover:invert-0 hover:opacity-100 transition-all duration-500 rounded-xl"
                 allowFullScreen

@@ -320,13 +320,13 @@ export default function BudgetPage() {
             <div className="flex items-center gap-2">
               <Image 
                 src="/Trillon isologo amarillo.png" 
-                alt="TrillonGraf Logo" 
+                alt="Trillongraf Carteles Logo" 
                 width={30} 
                 height={30} 
                 className="object-contain"
               />
               <h1 className="text-lg font-bold tracking-wide text-white">
-                TrillonGraf <span className="text-yellow-400 font-normal text-sm ml-2">| Presupuestos</span>
+                Trillongraf Carteles <span className="text-yellow-400 font-normal text-sm ml-2">| Presupuestos</span>
               </h1>
             </div>
           </div>
@@ -705,16 +705,16 @@ export default function BudgetPage() {
                     <div className="flex items-center gap-2">
                       <img 
                         src="/Trillon isologo amarillo.png" 
-                        alt="TrillonGraf" 
+                        alt="Trillongraf Carteles" 
                         className="h-10 w-10 object-contain"
                       />
                       <span className="text-2xl font-black tracking-wide text-neutral-950">
-                        TrillonGraf
+                        Trillongraf Carteles
                       </span>
                     </div>
                     <div className="text-[10px] sm:text-xs text-neutral-500 leading-relaxed font-medium">
                       <p>M. Cornelio Saavedra 3393, Granadero Baigorria</p>
-                      <p>WhatsApp: +54 9 341 325-8979</p>
+                      <p>WhatsApp: +54 9 341 325-8979 (Luciano) / +54 9 341 746-5561 (Martín)</p>
                       <p>Email: info@trillongraf.com.ar | www.trillongraf.com.ar</p>
                       <p>Publicidad Exterior - Cartelería Led y Corpóreos</p>
                     </div>
@@ -837,8 +837,8 @@ export default function BudgetPage() {
                 {/* Seller & Signature Fields */}
                 <div className="flex flex-row justify-between items-end text-[10px] text-neutral-500">
                   <div>
-                    <p><span className="font-semibold text-neutral-700">Emitido por:</span> {sellerName || "TrillonGraf"}</p>
-                    <p className="mt-1">Gracias por confiar en TrillonGraf.</p>
+                    <p><span className="font-semibold text-neutral-700">Emitido por:</span> {sellerName || "Trillongraf Carteles"}</p>
+                    <p className="mt-1">Gracias por confiar en Trillongraf Carteles.</p>
                   </div>
                   
                   {showSignature && (

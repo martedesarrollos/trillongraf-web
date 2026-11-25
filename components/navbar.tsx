@@ -4,9 +4,17 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { trackWhatsAppClick } from "@/lib/fpixel"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -39,13 +47,13 @@ export function Navbar() {
           <a href="#inicio" className="flex items-center gap-2.5 group">
             <Image
               src="/Trillon isologo amarillo.png"
-              alt="TrillonGraf Logo"
+              alt="Trillongraf Carteles"
               width={40}
               height={40}
               className="w-8 h-8 md:w-10 md:h-10 object-contain transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="text-white font-bold text-lg md:text-xl tracking-wide hidden sm:inline transition-colors duration-300 group-hover:text-yellow-400">
-              TrillonGraf
+            <span className="text-white font-extrabold text-base sm:text-xl tracking-tight transition-colors duration-300 group-hover:text-yellow-400">
+              Trillongraf <span className="text-yellow-400">Carteles</span>
             </span>
           </a>
 
@@ -60,16 +68,51 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Link 
-              href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." 
-              target="_blank"
-              onClick={() => trackWhatsAppClick("navbar_desktop", { button_text: "Pedir Presupuesto" })}
-            >
-            <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold cursor-pointer flex items-center gap-2">
-              <WhatsAppIcon size={18} />
-              Pedir Presupuesto
-            </Button>
-            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold cursor-pointer flex items-center gap-2">
+                  <WhatsAppIcon size={18} />
+                  Pedir Presupuesto
+                  <ChevronDown size={14} className="opacity-70" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56 bg-neutral-950 border border-neutral-800 text-white shadow-2xl rounded-xl p-1.5">
+                <DropdownMenuLabel className="text-[11px] text-neutral-400 px-2 py-1 font-semibold uppercase tracking-wider">
+                  Contactar por WhatsApp
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator className="bg-neutral-800 my-1" />
+                <DropdownMenuItem asChild className="hover:bg-neutral-900 focus:bg-neutral-900 rounded-lg cursor-pointer transition-colors">
+                  <a
+                    href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick("navbar_desktop_luciano", { contact: "Luciano" })}
+                    className="flex items-center justify-between px-2.5 py-2 w-full group"
+                  >
+                    <div>
+                      <div className="font-bold text-sm text-white group-hover:text-yellow-400 transition-colors">Luciano</div>
+                      <div className="text-[11px] text-neutral-400 font-mono">+54 9 341 325-8979</div>
+                    </div>
+                    <WhatsAppIcon size={16} className="text-[#25D366]" />
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="hover:bg-neutral-900 focus:bg-neutral-900 rounded-lg cursor-pointer transition-colors">
+                  <a
+                    href="https://wa.me/5493417465561?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick("navbar_desktop_martin", { contact: "Martín" })}
+                    className="flex items-center justify-between px-2.5 py-2 w-full group"
+                  >
+                    <div>
+                      <div className="font-bold text-sm text-white group-hover:text-yellow-400 transition-colors">Martín</div>
+                      <div className="text-[11px] text-neutral-400 font-mono">+54 9 341 746-5561</div>
+                    </div>
+                    <WhatsAppIcon size={16} className="text-[#25D366]" />
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
           </div>
 
@@ -98,16 +141,39 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Link 
-              href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." 
-              target="_blank"
-              onClick={() => trackWhatsAppClick("navbar_mobile", { button_text: "Pedir Presupuesto" })}
-            >
-            <Button className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold cursor-pointer flex items-center gap-2 w-full justify-center">
-              <WhatsAppIcon size={18} />
-              Pedir Presupuesto
-            </Button>
-            </Link>
+            <div className="pt-2 border-t border-neutral-800 flex flex-col gap-2">
+              <span className="text-xs text-neutral-400 font-semibold uppercase tracking-wider">
+                Pedir Presupuesto por WhatsApp:
+              </span>
+              <div className="grid grid-cols-2 gap-2">
+                <a
+                  href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    trackWhatsAppClick("navbar_mobile_luciano", { contact: "Luciano" })
+                    setIsMobileMenuOpen(false)
+                  }}
+                  className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold text-xs py-2.5 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-colors"
+                >
+                  <WhatsAppIcon size={15} />
+                  <span>Luciano</span>
+                </a>
+                <a
+                  href="https://wa.me/5493417465561?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    trackWhatsAppClick("navbar_mobile_martin", { contact: "Martín" })
+                    setIsMobileMenuOpen(false)
+                  }}
+                  className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold text-xs py-2.5 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-colors"
+                >
+                  <WhatsAppIcon size={15} />
+                  <span>Martín</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       )}

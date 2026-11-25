@@ -1,11 +1,19 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, MapPin, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { motion, useReducedMotion } from "framer-motion"
 import { trackWhatsAppClick } from "@/lib/fpixel"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export function HeroSection() {
   const shouldReduceMotion = useReducedMotion()
@@ -40,7 +48,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-workshop.jpg"
-          alt="TrillonGraf workshop background"
+          alt="Trillongraf Carteles - Taller de fabricación en Granadero Baigorria"
           className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-neutral-950/60 to-neutral-950" />
@@ -85,6 +93,11 @@ export function HeroSection() {
         animate="visible"
         className="container mx-auto relative z-20 text-center"
       >
+        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellow-400/10 border border-yellow-400/20 text-yellow-400 text-xs sm:text-sm font-bold tracking-wide uppercase mb-6">
+          <MapPin size={14} className="text-yellow-400" />
+          <span>Trillongraf Carteles • Granadero Baigorria y Gran Rosario</span>
+        </motion.div>
+
         <motion.h1 
           variants={itemVariants}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight text-balance tracking-tight"
@@ -97,7 +110,7 @@ export function HeroSection() {
           className="text-lg sm:text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto text-balance font-medium"
         >
           Llevamos tu imagen al mundo real. <br className="hidden sm:inline" />
-          Diseño, fabricación y montaje de cartelería de alto impacto.
+          Fábrica y taller de carteles luminosos, marquesinas y letras corpóreas con taller propio en Granadero Baigorria para todo el Gran Rosario.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -105,19 +118,54 @@ export function HeroSection() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
-          <Link 
-            href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto." 
-            target="_blank"
-            onClick={() => trackWhatsAppClick("hero_button", { button_text: "WhatsApp" })}
-          >
-            <Button
-              size="lg"
-              className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold text-lg px-8 py-6 w-full sm:w-auto cursor-pointer transition-transform active:scale-95 shadow-[0_4px_20px_rgba(250,204,21,0.2)] hover:shadow-[0_4px_25px_rgba(250,204,21,0.35)] flex items-center justify-center"
-            >
-              <WhatsAppIcon className="mr-2" size={20} />
-              WhatsApp
-            </Button>
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                size="lg"
+                className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold text-lg px-8 py-6 w-full sm:w-auto cursor-pointer transition-transform active:scale-95 shadow-[0_4px_20px_rgba(250,204,21,0.2)] hover:shadow-[0_4px_25px_rgba(250,204,21,0.35)] flex items-center justify-center gap-2"
+              >
+                <WhatsAppIcon size={20} />
+                WhatsApp
+                <ChevronDown size={18} className="opacity-70" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="w-64 bg-neutral-950 border border-neutral-800 text-white shadow-2xl rounded-xl p-2 z-50">
+              <DropdownMenuLabel className="text-[11px] text-neutral-400 px-2 py-1 font-semibold uppercase tracking-wider">
+                Contactar por WhatsApp
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator className="bg-neutral-800 my-1" />
+              <DropdownMenuItem asChild className="hover:bg-neutral-900 focus:bg-neutral-900 rounded-lg cursor-pointer transition-colors">
+                <a
+                  href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("hero_button_luciano", { contact: "Luciano" })}
+                  className="flex items-center justify-between px-2.5 py-2.5 w-full group"
+                >
+                  <div>
+                    <div className="font-bold text-sm text-white group-hover:text-yellow-400 transition-colors">Luciano</div>
+                    <div className="text-xs text-neutral-400 font-mono">+54 9 341 325-8979</div>
+                  </div>
+                  <WhatsAppIcon size={18} className="text-[#25D366]" />
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="hover:bg-neutral-900 focus:bg-neutral-900 rounded-lg cursor-pointer transition-colors">
+                <a
+                  href="https://wa.me/5493417465561?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("hero_button_martin", { contact: "Martín" })}
+                  className="flex items-center justify-between px-2.5 py-2.5 w-full group"
+                >
+                  <div>
+                    <div className="font-bold text-sm text-white group-hover:text-yellow-400 transition-colors">Martín</div>
+                    <div className="text-xs text-neutral-400 font-mono">+54 9 341 746-5561</div>
+                  </div>
+                  <WhatsAppIcon size={18} className="text-[#25D366]" />
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link href="#galeria" prefetch={false}>
             <Button
               size="lg"

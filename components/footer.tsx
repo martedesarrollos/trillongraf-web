@@ -6,6 +6,14 @@ import Image from "next/image"
 import Link from "next/link"
 import { trackWhatsAppClick } from "@/lib/fpixel"
 import { CITIES_LIST } from "@/lib/cities"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export function Footer() {
   return (
@@ -17,29 +25,65 @@ export function Footer() {
             <div className="flex items-center gap-2.5 mb-4 group">
               <Image
                 src="/Trillon isologo amarillo.png"
-                alt="TrillonGraf Logo"
+                alt="Trillongraf Carteles Logo"
                 width={36}
                 height={36}
                 className="w-7 h-7 object-contain transition-transform duration-300 group-hover:scale-110"
               />
-              <span className="text-white font-bold text-lg tracking-wide transition-colors duration-300 group-hover:text-yellow-400">
-                TrillonGraf
+              <span className="text-white font-extrabold text-lg tracking-wide transition-colors duration-300 group-hover:text-yellow-400">
+                Trillongraf <span className="text-yellow-400">Carteles</span>
               </span>
             </div>
             <p className="text-sm leading-relaxed mb-4">
-              Especialistas en cartelería y publicidad industrial. Diseño, fabricación y montaje profesional.
+              Fábrica y taller de cartelería publicitaria, marquesinas y letras corpóreas con sede en Granadero Baigorria para todo el Gran Rosario y el país.
             </p>
             <div className="flex gap-3">
-              <a
-                href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackWhatsAppClick("footer_social_icon")}
-                className="bg-neutral-800 hover:bg-yellow-400 hover:text-black p-2 rounded transition-colors"
-                aria-label="WhatsApp"
-              >
-                <WhatsAppIcon size={20} />
-              </a>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    className="bg-neutral-800 hover:bg-yellow-400 hover:text-black p-2 rounded transition-colors cursor-pointer"
+                    aria-label="WhatsApp"
+                  >
+                    <WhatsAppIcon size={20} />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-56 bg-neutral-950 border border-neutral-800 text-white shadow-2xl rounded-xl p-1.5">
+                  <DropdownMenuLabel className="text-[11px] text-neutral-400 px-2 py-1 font-semibold uppercase tracking-wider">
+                    Contactar por WhatsApp
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator className="bg-neutral-800 my-1" />
+                  <DropdownMenuItem asChild className="hover:bg-neutral-900 focus:bg-neutral-900 rounded-lg cursor-pointer transition-colors">
+                    <a
+                      href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackWhatsAppClick("footer_social_luciano", { contact: "Luciano" })}
+                      className="flex items-center justify-between px-2.5 py-2 w-full group"
+                    >
+                      <div>
+                        <div className="font-bold text-sm text-white group-hover:text-yellow-400 transition-colors">Luciano</div>
+                        <div className="text-[11px] text-neutral-400 font-mono">+54 9 341 325-8979</div>
+                      </div>
+                      <WhatsAppIcon size={16} className="text-[#25D366]" />
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className="hover:bg-neutral-900 focus:bg-neutral-900 rounded-lg cursor-pointer transition-colors">
+                    <a
+                      href="https://wa.me/5493417465561?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackWhatsAppClick("footer_social_martin", { contact: "Martín" })}
+                      className="flex items-center justify-between px-2.5 py-2 w-full group"
+                    >
+                      <div>
+                        <div className="font-bold text-sm text-white group-hover:text-yellow-400 transition-colors">Martín</div>
+                        <div className="text-[11px] text-neutral-400 font-mono">+54 9 341 746-5561</div>
+                      </div>
+                      <WhatsAppIcon size={16} className="text-[#25D366]" />
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <a
                 href="https://instagram.com/trillongrafpublicidad"
                 target="_blank"
@@ -113,11 +157,23 @@ export function Footer() {
                   href="https://wa.me/5493413258979?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackWhatsAppClick("footer_phone_link")}
+                  onClick={() => trackWhatsAppClick("footer_phone_luciano")}
                   className="flex items-start gap-2 hover:text-yellow-400 transition-colors group cursor-pointer"
                 >
                   <WhatsAppIcon size={18} className="text-yellow-400 flex-shrink-0 mt-0.5" />
-                  <span>+54 9 341 325-8979</span>
+                  <span>+54 9 341 325-8979 (Luciano)</span>
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <a
+                  href="https://wa.me/5493417465561?text=Hola,%20vi%20su%20web%20y%20quería%20consultar%20por%20un%20presupuesto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("footer_phone_martin")}
+                  className="flex items-start gap-2 hover:text-yellow-400 transition-colors group cursor-pointer"
+                >
+                  <WhatsAppIcon size={18} className="text-yellow-400 flex-shrink-0 mt-0.5" />
+                  <span>+54 9 341 746-5561 (Martín)</span>
                 </a>
               </li>
               <li className="flex items-start gap-2">
@@ -169,7 +225,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="pt-6 border-t border-neutral-900 text-center text-xs text-neutral-400">
-          <p>© {new Date().getFullYear()} TrillonGraf. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Trillongraf Carteles. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

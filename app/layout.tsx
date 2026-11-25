@@ -11,20 +11,20 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://trillongraf.com.ar"),
-  title: "Fábrica de Carteles y Letreros | Gran Rosario y Cordón Industrial",
+  title: "Trillongraf Carteles | Fábrica de Carteles en Granadero Baigorria y Rosario",
   description:
-    "Fábrica de carteles y letreros en Gran Rosario y San Lorenzo. Carteles luminosos LED, letras corpóreas 3D, marquesinas y mástiles. Presupuesto sin cargo.",
+    "Fábrica de carteles en Granadero Baigorria y Gran Rosario. Carteles luminosos LED, letras corpóreas 3D, marquesinas comerciales y ploteos. Presupuesto en el día.",
   keywords:
-    "fábrica de carteles, carteles luminosos, letras corpóreas, marquesinas, rotulación vehicular, mástiles, banderas publicitarias, fly banners, alquiler de mástiles, mástiles para eventos, banderas para negocios, banderas para empresas, Granadero Baigorria, Rosario, San Lorenzo, Cordón Industrial, Gran Rosario",
+    "Trillongraf Carteles, TrillonGraf, fábrica de carteles, carteles en Granadero Baigorria, quien hace carteles en Granadero Baigorria, hacer un cartel en Granadero Baigorria, carteles luminosos, letras corpóreas, marquesinas, rotulación vehicular, mástiles, banderas publicitarias, fly banners, Granadero Baigorria, Rosario, San Lorenzo, Cordón Industrial, Gran Rosario",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Fábrica de Carteles y Letreros | Gran Rosario y Cordón Industrial",
+    title: "Trillongraf Carteles | Fábrica de Carteles en Granadero Baigorria y Rosario",
     description:
-      "Fábrica de carteles y letreros en Gran Rosario y San Lorenzo. Carteles luminosos LED, letras corpóreas 3D, marquesinas y mástiles. Presupuesto sin cargo.",
+      "Fábrica de carteles en Granadero Baigorria y Gran Rosario. Carteles luminosos LED, letras corpóreas 3D, marquesinas comerciales y ploteos. Presupuesto en el día.",
     url: "https://trillongraf.com.ar",
-    siteName: "TrillonGraf",
+    siteName: "Trillongraf Carteles",
     locale: "es_AR",
     type: "website",
     images: [
@@ -32,15 +32,15 @@ export const metadata: Metadata = {
         url: "/trillongraf-logo-horizontal.jpg",
         width: 1200,
         height: 630,
-        alt: "TrillonGraf - Fábrica de Carteles y Publicidad",
+        alt: "Trillongraf Carteles - Fábrica de Carteles y Publicidad en Granadero Baigorria",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fábrica de Carteles y Letreros | Gran Rosario y Cordón Industrial",
+    title: "Trillongraf Carteles | Fábrica de Carteles en Granadero Baigorria y Rosario",
     description:
-      "Fábrica de carteles y letreros en Gran Rosario y San Lorenzo. Carteles luminosos LED, letras corpóreas 3D, marquesinas y mástiles. Presupuesto sin cargo.",
+      "Fábrica de carteles en Granadero Baigorria y Gran Rosario. Carteles luminosos LED, letras corpóreas 3D, marquesinas comerciales y ploteos. Presupuesto en el día.",
     images: ["/trillongraf-logo-horizontal.jpg"],
   },
   icons: {
@@ -67,52 +67,79 @@ export const metadata: Metadata = {
   },
 }
 
-const localBusinessJsonLd = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "TrillonGraf - Cartelería y Publicidad",
-  "image": "https://trillongraf.com.ar/trillongraf-logo-horizontal.jpg",
-  "url": "https://trillongraf.com.ar",
-  "telephone": "+5493413258979",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "M. Cornelio Saavedra 3393",
-    "addressLocality": "Granadero Baigorria",
-    "addressRegion": "Santa Fe",
-    "postalCode": "2152",
-    "addressCountry": "AR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -32.8554,
-    "longitude": -60.7108
-  },
-  "areaServed": [
-    { "@type": "City", "name": "Granadero Baigorria" },
-    { "@type": "City", "name": "Rosario" },
-    { "@type": "City", "name": "San Lorenzo" },
-    { "@type": "City", "name": "Capitán Bermúdez" },
-    { "@type": "City", "name": "Funes" },
-    { "@type": "AdministrativeArea", "name": "Gran Rosario" },
-    { "@type": "AdministrativeArea", "name": "Cordón Industrial" }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/trillongraf",
-    "https://instagram.com/trillongrafpublicidad"
-  ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "08:00",
-    "closes": "18:00"
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://trillongraf.com.ar/#website",
+      "url": "https://trillongraf.com.ar",
+      "name": "Trillongraf Carteles",
+      "alternateName": [
+        "TrillonGraf Carteles",
+        "Trillongraf",
+        "TrillonGraf"
+      ],
+      "publisher": {
+        "@id": "https://trillongraf.com.ar/#localbusiness"
+      }
+    },
+    {
+      "@type": ["LocalBusiness", "Store"],
+      "@id": "https://trillongraf.com.ar/#localbusiness",
+      "name": "Trillongraf Carteles",
+      "alternateName": [
+        "TrillonGraf Carteles",
+        "Trillongraf",
+        "TrillonGraf"
+      ],
+      "image": "https://trillongraf.com.ar/trillongraf-logo-horizontal.jpg",
+      "url": "https://trillongraf.com.ar",
+      "telephone": ["+5493413258979", "+5493417465561"],
+      "priceRange": "$$",
+      "description":
+        "Fábrica de carteles luminosos LED, letras corpóreas 3D, marquesinas y publicidad comercial con taller propio en Granadero Baigorria para todo el Gran Rosario.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "M. Cornelio Saavedra 3393",
+        "addressLocality": "Granadero Baigorria",
+        "addressRegion": "Santa Fe",
+        "postalCode": "2152",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -32.8554,
+        "longitude": -60.7108
+      },
+      "hasMap": "https://maps.google.com/maps?q=M.%20Cornelio%20Saavedra%203393,%20Granadero%20Baigorria,%20Santa%20Fe",
+      "areaServed": [
+        { "@type": "City", "name": "Granadero Baigorria" },
+        { "@type": "City", "name": "Rosario" },
+        { "@type": "City", "name": "San Lorenzo" },
+        { "@type": "City", "name": "Capitán Bermúdez" },
+        { "@type": "City", "name": "Funes" },
+        { "@type": "AdministrativeArea", "name": "Gran Rosario" },
+        { "@type": "AdministrativeArea", "name": "Cordón Industrial" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/trillongraf",
+        "https://instagram.com/trillongrafpublicidad"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    }
+  ]
 }
 
 export default function RootLayout({
@@ -125,7 +152,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       <body className={`font-sans antialiased`}>

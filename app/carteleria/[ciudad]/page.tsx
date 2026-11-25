@@ -34,11 +34,11 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 
   if (!city) {
     return {
-      title: "Ciudad no encontrada | TrillonGraf",
+      title: "Ciudad no encontrada | Trillongraf Carteles",
     }
   }
 
-  const pageTitle = `${city.title} | TrillonGraf Fábrica`
+  const pageTitle = `${city.title} | Trillongraf Carteles`
   const metaDescription = `Fábrica de cartelería y letreros en ${city.name}. Carteles luminosos LED, letras corpóreas 3D y marquesinas para comercios. Cotización rápida.`
 
   return {
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       title: pageTitle,
       description: metaDescription,
       url: `https://trillongraf.com.ar/carteleria/${city.slug}`,
-      siteName: "TrillonGraf",
+      siteName: "Trillongraf Carteles",
       locale: "es_AR",
       type: "website",
       images: [
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
           url: "https://trillongraf.com.ar/trillongraf-logo-horizontal.jpg",
           width: 1200,
           height: 630,
-          alt: `TrillonGraf - Cartelería en ${city.name}`,
+          alt: `Trillongraf Carteles - Cartelería en ${city.name}`,
         },
       ],
     },
@@ -81,17 +81,17 @@ export default async function CityPage({ params }: CityPageProps) {
   }
 
   const whatsappMessage = encodeURIComponent(
-    `Hola TrillonGraf! Soy de ${city.name} y quería consultar por un presupuesto de cartelería para mi negocio.`
+    `Hola Trillongraf! Soy de ${city.name} y quería consultar por un presupuesto de cartelería para mi negocio.`
   )
   const whatsappUrl = `https://wa.me/5493413258979?text=${whatsappMessage}`
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": `TrillonGraf - Cartelería en ${city.name}`,
+    "name": `Trillongraf Carteles - ${city.name}`,
     "image": "https://trillongraf.com.ar/trillongraf-logo-horizontal.jpg",
     "url": `https://trillongraf.com.ar/carteleria/${city.slug}`,
-    "telephone": "+5493413258979",
+    "telephone": ["+5493413258979", "+5493417465561"],
     "priceRange": "$$",
     "areaServed": {
       "@type": "City",
@@ -117,13 +117,13 @@ export default async function CityPage({ params }: CityPageProps) {
           <Link href="/" className="flex items-center gap-2 group">
             <Image
               src="/Trillon isologo amarillo.png"
-              alt="TrillonGraf Logo"
+              alt="Trillongraf Carteles Logo"
               width={32}
               height={32}
               className="w-7 h-7 object-contain transition-transform group-hover:scale-105"
             />
             <span className="text-white font-extrabold text-lg tracking-tight group-hover:text-yellow-400 transition-colors">
-              TrillonGraf
+              Trillongraf <span className="text-yellow-400">Carteles</span>
             </span>
           </Link>
 
@@ -276,7 +276,7 @@ export default async function CityPage({ params }: CityPageProps) {
             {/* Checklist */}
             <div className="mt-8 p-6 rounded-2xl bg-neutral-950 border border-neutral-800/80">
               <h4 className="text-sm font-bold text-neutral-200 uppercase tracking-wider mb-4">
-                Beneficios de elegir TrillonGraf para tu local en {city.name}:
+                Beneficios de elegir Trillongraf Carteles para tu local en {city.name}:
               </h4>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-neutral-300">
                 {city.highlights.map((highlight, index) => (
@@ -356,7 +356,7 @@ export default async function CityPage({ params }: CityPageProps) {
       {/* Minimal Footer */}
       <footer className="border-t border-neutral-900 py-8 px-4 text-center text-xs text-neutral-500">
         <p className="mb-2">
-          © {new Date().getFullYear()} TrillonGraf. Cartelería y Publicidad en {city.name}, Gran Rosario y Cordón Industrial.
+          © {new Date().getFullYear()} Trillongraf Carteles. Cartelería y Publicidad en {city.name}, Gran Rosario y Cordón Industrial.
         </p>
         <div className="flex items-center justify-center gap-4 text-neutral-400 font-medium">
           <Link href="/" className="hover:text-yellow-400 transition-colors">

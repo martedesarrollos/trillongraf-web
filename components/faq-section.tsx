@@ -6,7 +6,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqItems = [
   {
-    question: "¿Qué tipos de carteles fabrican en TrillonGraf y cómo elijo el adecuado para mi local?",
+    question: "¿Quién me puede hacer un cartel en Granadero Baigorria?",
+    answer: "En Trillongraf Carteles somos fabricantes directos con taller propio en Granadero Baigorria (M. Cornelio Saavedra 3393). Diseñamos, fabricamos e instalamos todo tipo de carteles para negocios, comercios y empresas: carteles luminosos LED, marquesinas frontlight y backlight, letras corpóreas 3D en relieve, letreros de neón LED y ploteos comerciales. Brindamos asesoramiento personalizado, medición presencial en tu local y presupuesto en el día sin cargo por WhatsApp."
+  },
+  {
+    question: "¿Qué tipos de carteles fabrican en Trillongraf Carteles y cómo elijo el adecuado para mi local?",
     answer: "Fabricamos una amplia gama de cartelería publicitaria a medida: marquesinas comerciales de gran formato, carteles frontlight (lona impresa iluminada externamente), carteles backlight (retroiluminados por LED internos para brillar de noche), tótems de altura, carteles corpóreos 3D y letreros de neón LED personalizados. Para elegir el adecuado, nuestro equipo analiza las dimensiones de tu fachada, la iluminación del entorno y tus objetivos comerciales, recomendando el tipo de estructura y luz óptimos para destacar tu negocio."
   },
   {
@@ -27,11 +31,11 @@ const faqItems = [
   },
   {
     question: "¿Cuál es la zona de cobertura para la fabricación e instalación de cartelería y ploteos?",
-    answer: "Nuestra base y taller de fabricación se encuentran en Granadero Baigorria, Santa Fe. Realizamos mediciones, colocaciones y montajes profesionales en toda la zona del Gran Rosario (Rosario, San Lorenzo, Capitán Bermúdez, Funes, Roldán, Ibarlucea, etc.) y en el cordón industrial santafesino. Asimismo, fabricamos y despachamos carteles corpóreos 3D y marquesinas preensambladas listas para instalar, con envíos seguros y embalaje reforzado a todo el país."
+    answer: "Nuestra fábrica y taller se encuentran en Granadero Baigorria, Santa Fe. Realizamos mediciones, colocaciones y montajes profesionales en toda la zona del Gran Rosario (Granadero Baigorria, Rosario, San Lorenzo, Capitán Bermúdez, Funes, Roldán, Ibarlucea, etc.) y en el cordón industrial santafesino. Asimismo, fabricamos y despachamos carteles corpóreos 3D y marquesinas preensambladas listas para instalar, con envíos seguros y embalaje reforzado a todo el país."
   },
   {
     question: "¿Realizan fabricación y alquiler de mástiles, banderas y fly banners para empresas y eventos?",
-    answer: "Sí, en TrillonGraf fabricamos y alquilamos mástiles fijos y portátiles para empresas, negocios y eventos en todo el Gran Rosario y Santa Fe. Confeccionamos banderas publicitarias institucionales y fly banners (formatos gota y pluma) en telas náuticas y sublimación de alta definición resistente a la intemperie. Ofrecemos servicio de alquiler de mástiles con bases para ferias, exposiciones y actos corporativos."
+    answer: "Sí, en Trillongraf Carteles fabricamos y alquilamos mástiles fijos y portátiles para empresas, negocios y eventos en todo el Gran Rosario y Santa Fe. Confeccionamos banderas publicitarias institucionales y fly banners (formatos gota y pluma) en telas náuticas y sublimación de alta definición resistente a la intemperie. Ofrecemos servicio de alquiler de mástiles con bases para ferias, exposiciones y actos corporativos."
   }
 ]
 

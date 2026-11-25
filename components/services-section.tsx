@@ -350,7 +350,7 @@ export function ServicesSection() {
       <section className="sr-only" aria-label="Fabricación y alquiler de mástiles, banderas y fly banners">
         <h2>Fabricación y Alquiler de Mástiles, Banderas Publicitarias y Fly Banners para Negocios y Empresas</h2>
         <p>
-          En TrillonGraf nos especializamos en la fabricación y alquiler de mástiles para eventos, negocios y empresas en Rosario, Granadero Baigorria, San Lorenzo y todo el cordón industrial de Santa Fe.
+          En Trillongraf Carteles nos especializamos en la fabricación y alquiler de mástiles para eventos, negocios y empresas en Rosario, Granadero Baigorria, San Lorenzo y todo el cordón industrial de Santa Fe.
         </p>
         <p>
           Diseñamos y confeccionamos banderas institucionales, banderas publicitarias de exterior e interior, y fly banners en formatos pluma, gota y vela con impresión textil sublimada de alta definición resistente a los rayos UV, lavado y vientos fuertes.
@@ -375,8 +375,8 @@ export function ServicesSection() {
             "serviceType": "Mástiles y Banderas Publicitarias para Eventos y Negocios",
             "provider": {
               "@type": "LocalBusiness",
-              "name": "TrillonGraf - Fábrica de Cartelería y Publicidad",
-              "telephone": "+5493413258979",
+              "name": "Trillongraf Carteles",
+              "telephone": ["+5493413258979", "+5493417465561"],
               "url": "https://trillongraf.com.ar"
             },
             "areaServed": [

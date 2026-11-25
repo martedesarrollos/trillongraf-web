@@ -19,7 +19,7 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Fabricación y Alquiler de Mástiles, Banderas y Fly Banners | TrillonGraf",
+  title: "Fabricación y Alquiler de Mástiles, Banderas y Fly Banners | Trillongraf Carteles",
   description:
     "Fabricación y alquiler de mástiles, banderas publicitarias y fly banners para eventos y empresas en Gran Rosario y Santa Fe. Envíos y colocación.",
   keywords:
@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     canonical: "/mastiles",
   },
   openGraph: {
-    title: "Fabricación y Alquiler de Mástiles, Banderas y Fly Banners | TrillonGraf",
+    title: "Fabricación y Alquiler de Mástiles, Banderas y Fly Banners | Trillongraf Carteles",
     description:
       "Fabricación y alquiler de mástiles, banderas publicitarias y fly banners para eventos y empresas en Gran Rosario y Santa Fe. Envíos y colocación.",
     url: "https://trillongraf.com.ar/mastiles",
-    siteName: "TrillonGraf",
+    siteName: "Trillongraf Carteles",
     locale: "es_AR",
     type: "website",
     images: [
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
         url: "/banderas.jpg",
         width: 1200,
         height: 630,
-        alt: "TrillonGraf - Mástiles, Banderas y Fly Banners",
+        alt: "Trillongraf Carteles - Mástiles, Banderas y Fly Banners",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fabricación y Alquiler de Mástiles, Banderas y Fly Banners | TrillonGraf",
+    title: "Fabricación y Alquiler de Mástiles, Banderas y Fly Banners | Trillongraf Carteles",
     description:
       "Fabricación y alquiler de mástiles, banderas publicitarias y fly banners para eventos y empresas en Gran Rosario y Santa Fe. Envíos y colocación.",
     images: ["/banderas.jpg"],
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 
 export default function MastilesPage() {
   const whatsappMessage = encodeURIComponent(
-    "Hola TrillonGraf! Quería consultar por un presupuesto de fabricación o alquiler de mástiles / banderas / fly banners para mi negocio o evento."
+    "Hola Trillongraf Carteles! Quería consultar por un presupuesto de fabricación o alquiler de mástiles / banderas / fly banners para mi negocio o evento."
   )
   const whatsappUrl = `https://wa.me/5493413258979?text=${whatsappMessage}`
 
@@ -66,8 +66,8 @@ export default function MastilesPage() {
     "serviceType": "Mástiles y Banderas Publicitarias para Eventos y Negocios",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "TrillonGraf - Fábrica de Cartelería y Publicidad",
-      "telephone": "+5493413258979",
+      "name": "Trillongraf Carteles",
+      "telephone": ["+5493413258979", "+5493417465561"],
       "url": "https://trillongraf.com.ar",
       "image": "https://trillongraf.com.ar/banderas.jpg",
       "address": {
@@ -151,13 +151,13 @@ export default function MastilesPage() {
           <Link href="/" className="flex items-center gap-2 group">
             <Image
               src="/Trillon isologo amarillo.png"
-              alt="TrillonGraf Logo"
+              alt="Trillongraf Carteles Logo"
               width={32}
               height={32}
               className="w-7 h-7 object-contain transition-transform group-hover:scale-105"
             />
             <span className="text-white font-extrabold text-lg tracking-tight group-hover:text-yellow-400 transition-colors">
-              TrillonGraf
+              Trillongraf <span className="text-yellow-400">Carteles</span>
             </span>
           </Link>
 
@@ -360,7 +360,7 @@ export default function MastilesPage() {
 
       {/* Footer */}
       <footer className="border-t border-neutral-900 bg-neutral-950 py-8 px-4 text-center text-xs text-neutral-500">
-        <p className="mb-2">© {new Date().getFullYear()} TrillonGraf. Fábrica de Cartelería y Publicidad.</p>
+        <p className="mb-2">© {new Date().getFullYear()} Trillongraf Carteles. Fábrica de Cartelería y Publicidad.</p>
         <p className="mb-3">Fabricación y alquiler de mástiles y banderas en todo el Gran Rosario, Cordón Industrial y Santa Fe.</p>
         <div className="flex items-center justify-center gap-4 text-neutral-400 font-medium">
           <Link href="/" className="hover:text-yellow-400 transition-colors">

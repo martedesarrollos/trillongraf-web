@@ -49,16 +49,16 @@ export const CITIES: Record<string, CityConfig> = {
     name: "Granadero Baigorria",
     department: "Gran Rosario",
     badge: "Taller Propio en Granadero Baigorria",
-    title: "Carteles y Cartelería en Granadero Baigorria",
+    title: "Fábrica de Carteles y Cartelería en Granadero Baigorria",
     description:
-      "Fábrica directa de cartelería publicitaria con base en Granadero Baigorria. Marquesinas, tótems, letras corpóreas y letreros luminosos con atención personalizada, visita al local y presupuestos rápidos.",
+      "Fábrica y taller de carteles en Granadero Baigorria. Marquesinas frontlight y backlight, letras corpóreas 3D, letreros de neón LED y ploteos comerciales con medición presencial y presupuestos en el día.",
     zoneDescription:
-      "Nuestra planta y taller se encuentran en Granadero Baigorria, lo que te garantiza atención inmediata, medición presencial y entrega sin intermediarios.",
+      "Nuestra planta y taller se encuentran en M. Cornelio Saavedra 3393, Granadero Baigorria, lo que te garantiza atención inmediata, medición presencial y entrega directa.",
     highlights: [
-      "Atención directa de fábrica sin intermediarios en Baigorria.",
-      "Mediciones y asesoramiento en tu local comercial.",
-      "Tótems para estaciones de servicio y cartelería estructural pesada.",
-      "Ploteo de vehículos comerciales y rotulación en vinilo.",
+      "Fabricación directa en taller propio en Granadero Baigorria.",
+      "Asesoramiento y relevamiento técnico sin cargo en tu local.",
+      "Carteles luminosos LED, letras corpóreas 3D y marquesinas.",
+      "Ploteo de vehículos comerciales, vidrieras y rotulación en vinilo.",
     ],
   },
   "capitan-bermudez": {
